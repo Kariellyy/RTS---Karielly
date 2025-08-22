@@ -1,0 +1,427 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{abreu2016sistema}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=cf75a86ce9fefcc54b66fcae9c27ba52}{%
+           family={Abreu},
+           familyi={A\bibinitperiod},
+           given={Lucas\bibnamedelimb Gennari\bibnamedelima Silva},
+           giveni={L\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{cf75a86ce9fefcc54b66fcae9c27ba52}
+      \strng{fullhash}{cf75a86ce9fefcc54b66fcae9c27ba52}
+      \strng{fullhashraw}{cf75a86ce9fefcc54b66fcae9c27ba52}
+      \strng{bibnamehash}{cf75a86ce9fefcc54b66fcae9c27ba52}
+      \strng{authorbibnamehash}{cf75a86ce9fefcc54b66fcae9c27ba52}
+      \strng{authornamehash}{cf75a86ce9fefcc54b66fcae9c27ba52}
+      \strng{authorfullhash}{cf75a86ce9fefcc54b66fcae9c27ba52}
+      \strng{authorfullhashraw}{cf75a86ce9fefcc54b66fcae9c27ba52}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Sistema de controle de ponto auxiliado por aplicativo Android}
+      \field{year}{2016}
+    \endentry
+    \entry{brasil1943}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=aa43becf0d21463be7540bf3b40bf243}{%
+           family={Brasil},
+           familyi={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Imprensa Nacional}%
+      }
+      \strng{namehash}{aa43becf0d21463be7540bf3b40bf243}
+      \strng{fullhash}{aa43becf0d21463be7540bf3b40bf243}
+      \strng{fullhashraw}{aa43becf0d21463be7540bf3b40bf243}
+      \strng{bibnamehash}{aa43becf0d21463be7540bf3b40bf243}
+      \strng{authorbibnamehash}{aa43becf0d21463be7540bf3b40bf243}
+      \strng{authornamehash}{aa43becf0d21463be7540bf3b40bf243}
+      \strng{authorfullhash}{aa43becf0d21463be7540bf3b40bf243}
+      \strng{authorfullhashraw}{aa43becf0d21463be7540bf3b40bf243}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Consolidação das Leis do Trabalho (CLT)}
+      \field{year}{1943}
+    \endentry
+    \entry{FlorindoBianchi2022}{thesis}{}{}
+      \name{author}{2}{}{%
+        {{hash=e218921b9cf4afd22deb4fac4238d629}{%
+           family={Florindo},
+           familyi={F\bibinitperiod},
+           given={Glênio\bibnamedelimb Henrique\bibnamedelima Carvalho},
+           giveni={G\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=fa07356c180d8460c18a40ca1e6ff882}{%
+           family={Bianchi},
+           familyi={B\bibinitperiod},
+           given={Renata\bibnamedelima Alexandre},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Faculdade de Tecnologia de Franca - "Dr. Thomaz Novelino"}%
+      }
+      \list{location}{1}{%
+        {Franca, SP}%
+      }
+      \strng{namehash}{1726109094c698c9082097604f2d446f}
+      \strng{fullhash}{1726109094c698c9082097604f2d446f}
+      \strng{fullhashraw}{1726109094c698c9082097604f2d446f}
+      \strng{bibnamehash}{1726109094c698c9082097604f2d446f}
+      \strng{authorbibnamehash}{1726109094c698c9082097604f2d446f}
+      \strng{authornamehash}{1726109094c698c9082097604f2d446f}
+      \strng{authorfullhash}{1726109094c698c9082097604f2d446f}
+      \strng{authorfullhashraw}{1726109094c698c9082097604f2d446f}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{bookpagination}{sheet}
+      \field{note}{Orientador: Profª Dra. Jaqueline Brigladori Pugliesi}
+      \field{title}{Desenvolvimento de Aplicação para Registro de Ponto Inteligente}
+      \field{type}{Trabalho de Graduação}
+      \field{year}{2022}
+    \endentry
+    \entry{gomes2023}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=a4ca727d8e1ca3fce7d00736f1fd0cd7}{%
+           family={Gomes},
+           familyi={G\bibinitperiod},
+           given={José\bibnamedelimb Victor\bibnamedelima Magalhães},
+           giveni={J\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Universidade Federal Rural do Semi-Árido}%
+      }
+      \strng{namehash}{a4ca727d8e1ca3fce7d00736f1fd0cd7}
+      \strng{fullhash}{a4ca727d8e1ca3fce7d00736f1fd0cd7}
+      \strng{fullhashraw}{a4ca727d8e1ca3fce7d00736f1fd0cd7}
+      \strng{bibnamehash}{a4ca727d8e1ca3fce7d00736f1fd0cd7}
+      \strng{authorbibnamehash}{a4ca727d8e1ca3fce7d00736f1fd0cd7}
+      \strng{authornamehash}{a4ca727d8e1ca3fce7d00736f1fd0cd7}
+      \strng{authorfullhash}{a4ca727d8e1ca3fce7d00736f1fd0cd7}
+      \strng{authorfullhashraw}{a4ca727d8e1ca3fce7d00736f1fd0cd7}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{bookpagination}{sheet}
+      \field{title}{PontoUp - Sistema de Gerenciamento e Registro de Ponto Eletrônico}
+      \field{type}{phdthesis}
+      \field{year}{2023}
+    \endentry
+    \entry{Longo2019}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=2d841276b8378e5a4abbf4804214a12e}{%
+           family={Longo},
+           familyi={L\bibinitperiod},
+           given={Maria\bibnamedelima Tereza},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=67e8dfa6e1576215f76ed55ad79594ab}{%
+           family={Watanabe},
+           familyi={W\bibinitperiod},
+           given={Carolina\bibnamedelimb Yukari\bibnamedelima Veludo},
+           giveni={C\bibinitperiod\bibinitdelim Y\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {São Paulo, Brasil}%
+      }
+      \strng{namehash}{e0ee36a8e5625851fbb17f60f35a4de7}
+      \strng{fullhash}{e0ee36a8e5625851fbb17f60f35a4de7}
+      \strng{fullhashraw}{e0ee36a8e5625851fbb17f60f35a4de7}
+      \strng{bibnamehash}{e0ee36a8e5625851fbb17f60f35a4de7}
+      \strng{authorbibnamehash}{e0ee36a8e5625851fbb17f60f35a4de7}
+      \strng{authornamehash}{e0ee36a8e5625851fbb17f60f35a4de7}
+      \strng{authorfullhash}{e0ee36a8e5625851fbb17f60f35a4de7}
+      \strng{authorfullhashraw}{e0ee36a8e5625851fbb17f60f35a4de7}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Anais do XXII SEMEAD - Seminários em Administração}
+      \field{title}{Transformação Digital: Uma análise das principais barreiras e dificuldades em micro e pequenas empresas}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://login.semead.com.br/22semead/anais/arquivos/1022.pdf
+      \endverb
+      \verb{url}
+      \verb https://login.semead.com.br/22semead/anais/arquivos/1022.pdf
+      \endverb
+    \endentry
+    \entry{mariotti2011}{thesis}{}{}
+      \name{author}{2}{}{%
+        {{hash=4d61ee332aac033ec1fffb296eca8758}{%
+           family={Mariotti},
+           familyi={M\bibinitperiod},
+           given={Isabel},
+           giveni={I\bibinitperiod}}}%
+        {{hash=70c43f4abfb2a143a67ed8b1552990dd}{%
+           family={Kienetz},
+           familyi={K\bibinitperiod},
+           given={Taiani\bibnamedelima Bacchi},
+           giveni={T\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Universidade Federal de Santa Maria}%
+      }
+      \strng{namehash}{5156bbeebde4de84fcbe64ad7621edfb}
+      \strng{fullhash}{5156bbeebde4de84fcbe64ad7621edfb}
+      \strng{fullhashraw}{5156bbeebde4de84fcbe64ad7621edfb}
+      \strng{bibnamehash}{5156bbeebde4de84fcbe64ad7621edfb}
+      \strng{authorbibnamehash}{5156bbeebde4de84fcbe64ad7621edfb}
+      \strng{authornamehash}{5156bbeebde4de84fcbe64ad7621edfb}
+      \strng{authorfullhash}{5156bbeebde4de84fcbe64ad7621edfb}
+      \strng{authorfullhashraw}{5156bbeebde4de84fcbe64ad7621edfb}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{bookpagination}{sheet}
+      \field{title}{Perspectivas da Utilização do Ponto Eletrônico de Acordo com a Portaria 1.510/09}
+      \field{type}{phdthesis}
+      \field{year}{2011}
+    \endentry
+    \entry{reactjs}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=350a86b0327152e3a50596538f38a5db}{%
+           family={{Meta Platforms, Inc.}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{350a86b0327152e3a50596538f38a5db}
+      \strng{fullhash}{350a86b0327152e3a50596538f38a5db}
+      \strng{fullhashraw}{350a86b0327152e3a50596538f38a5db}
+      \strng{bibnamehash}{350a86b0327152e3a50596538f38a5db}
+      \strng{authorbibnamehash}{350a86b0327152e3a50596538f38a5db}
+      \strng{authornamehash}{350a86b0327152e3a50596538f38a5db}
+      \strng{authorfullhash}{350a86b0327152e3a50596538f38a5db}
+      \strng{authorfullhashraw}{350a86b0327152e3a50596538f38a5db}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://reactjs.org/}}
+      \field{note}{Acesso em: 27 mar. 2025}
+      \field{title}{React – A JavaScript library for building user interfaces}
+      \field{year}{2025}
+    \endentry
+    \entry{typescript}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={{Microsoft}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.typescriptlang.org/}}
+      \field{note}{Acesso em: 27 mar. 2025}
+      \field{title}{TypeScript - JavaScript with syntax for types}
+      \field{year}{2025}
+    \endentry
+    \entry{miranda2023}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=a6cc5ec2ee1af64d9e040c636a4551aa}{%
+           family={Miranda},
+           familyi={M\bibinitperiod},
+           given={Izabella},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{a6cc5ec2ee1af64d9e040c636a4551aa}
+      \strng{fullhash}{a6cc5ec2ee1af64d9e040c636a4551aa}
+      \strng{fullhashraw}{a6cc5ec2ee1af64d9e040c636a4551aa}
+      \strng{bibnamehash}{a6cc5ec2ee1af64d9e040c636a4551aa}
+      \strng{authorbibnamehash}{a6cc5ec2ee1af64d9e040c636a4551aa}
+      \strng{authornamehash}{a6cc5ec2ee1af64d9e040c636a4551aa}
+      \strng{authorfullhash}{a6cc5ec2ee1af64d9e040c636a4551aa}
+      \strng{authorfullhashraw}{a6cc5ec2ee1af64d9e040c636a4551aa}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: 10 mar. 2025}
+      \field{title}{Controle de ponto: conheça os tipos e escolha o ideal para a sua empresa}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.contabeis.com.br/noticias/60426/controle-de-ponto-conheca-os-tipos-e-escolha-o-ideal-para-a-sua-empresa/
+      \endverb
+      \verb{url}
+      \verb https://www.contabeis.com.br/noticias/60426/controle-de-ponto-conheca-os-tipos-e-escolha-o-ideal-para-a-sua-empresa/
+      \endverb
+    \endentry
+    \entry{nestjs}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=304279eb5e3d9bf136793df31d429c9f}{%
+           family={{NestJS Contributors}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{304279eb5e3d9bf136793df31d429c9f}
+      \strng{fullhash}{304279eb5e3d9bf136793df31d429c9f}
+      \strng{fullhashraw}{304279eb5e3d9bf136793df31d429c9f}
+      \strng{bibnamehash}{304279eb5e3d9bf136793df31d429c9f}
+      \strng{authorbibnamehash}{304279eb5e3d9bf136793df31d429c9f}
+      \strng{authornamehash}{304279eb5e3d9bf136793df31d429c9f}
+      \strng{authorfullhash}{304279eb5e3d9bf136793df31d429c9f}
+      \strng{authorfullhashraw}{304279eb5e3d9bf136793df31d429c9f}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://nestjs.com/}}
+      \field{note}{Acesso em: 27 mar. 2025}
+      \field{title}{NestJS - A progressive Node.js framework for building efficient, reliable and scalable server-side applications}
+      \field{year}{2025}
+    \endentry
+    \entry{prisma}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=80724a2247d77a729278af32df62da8c}{%
+           family={{Prisma Data, Inc.}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{80724a2247d77a729278af32df62da8c}
+      \strng{fullhash}{80724a2247d77a729278af32df62da8c}
+      \strng{fullhashraw}{80724a2247d77a729278af32df62da8c}
+      \strng{bibnamehash}{80724a2247d77a729278af32df62da8c}
+      \strng{authorbibnamehash}{80724a2247d77a729278af32df62da8c}
+      \strng{authornamehash}{80724a2247d77a729278af32df62da8c}
+      \strng{authorfullhash}{80724a2247d77a729278af32df62da8c}
+      \strng{authorfullhashraw}{80724a2247d77a729278af32df62da8c}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.prisma.io/}}
+      \field{note}{Acesso em: 27 mar. 2025}
+      \field{title}{Prisma - Next-generation Node.js and TypeScript ORM}
+      \field{year}{2025}
+    \endentry
+    \entry{tailwindcss}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=115eb058b42d5a622d39c9383748c476}{%
+           family={{Tailwind Labs}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{115eb058b42d5a622d39c9383748c476}
+      \strng{fullhash}{115eb058b42d5a622d39c9383748c476}
+      \strng{fullhashraw}{115eb058b42d5a622d39c9383748c476}
+      \strng{bibnamehash}{115eb058b42d5a622d39c9383748c476}
+      \strng{authorbibnamehash}{115eb058b42d5a622d39c9383748c476}
+      \strng{authornamehash}{115eb058b42d5a622d39c9383748c476}
+      \strng{authorfullhash}{115eb058b42d5a622d39c9383748c476}
+      \strng{authorfullhashraw}{115eb058b42d5a622d39c9383748c476}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://tailwindcss.com/}}
+      \field{note}{Acesso em: 27 mar. 2025}
+      \field{title}{Tailwind CSS - Rapidly build modern websites without ever leaving your HTML}
+      \field{year}{2025}
+    \endentry
+    \entry{postgresql}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=917cf2b2062aec0c604dbecc106084cd}{%
+           family={{The PostgreSQL Global Development Group}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{fullhash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{fullhashraw}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{bibnamehash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{authorbibnamehash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{authornamehash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{authorfullhash}{917cf2b2062aec0c604dbecc106084cd}
+      \strng{authorfullhashraw}{917cf2b2062aec0c604dbecc106084cd}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.postgresql.org/}}
+      \field{note}{Acesso em: 27 mar. 2025}
+      \field{title}{PostgreSQL - The world's most advanced open source database}
+      \field{year}{2025}
+    \endentry
+    \entry{nextjs}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=dc173d57136dbe619cbccee88ee6421c}{%
+           family={{Vercel}},
+           familyi={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{dc173d57136dbe619cbccee88ee6421c}
+      \strng{fullhash}{dc173d57136dbe619cbccee88ee6421c}
+      \strng{fullhashraw}{dc173d57136dbe619cbccee88ee6421c}
+      \strng{bibnamehash}{dc173d57136dbe619cbccee88ee6421c}
+      \strng{authorbibnamehash}{dc173d57136dbe619cbccee88ee6421c}
+      \strng{authornamehash}{dc173d57136dbe619cbccee88ee6421c}
+      \strng{authorfullhash}{dc173d57136dbe619cbccee88ee6421c}
+      \strng{authorfullhashraw}{dc173d57136dbe619cbccee88ee6421c}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://nextjs.org/}}
+      \field{note}{Acesso em: 27 mar. 2025}
+      \field{title}{Next.js - The React Framework}
+      \field{year}{2025}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
