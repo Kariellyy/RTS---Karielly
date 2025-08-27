@@ -678,12 +678,12 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ts1phv.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ts1phv.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ts1phv.fd
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvr8c.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/adobe/helvetic/phvr8c.vf
 INPUT ./capitulos/tecnologias.tex
 INPUT ./capitulos/tecnologias.tex
 INPUT ./capitulos/tecnologias.tex
 INPUT ./capitulos/tecnologias.tex
 INPUT capitulos/tecnologias.tex
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/adobe/helvetic/phvr8c.vf
 INPUT ./capitulos/modelagem-projeto.tex
 INPUT ./capitulos/modelagem-projeto.tex
 INPUT ./capitulos/modelagem-projeto.tex

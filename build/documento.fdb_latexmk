@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber build/documento"] 1755896588.411 "build/documento.bcf" "build/documento.bbl" "build/documento" 1756269792.9379 0
+["biber build/documento"] 1755896588.411 "build/documento.bcf" "build/documento.bbl" "build/documento" 1756274950.39468 0
   "bibliografia.bib" 1755905510 4282 c42022c42615b679a4cdd43dcb374461 ""
-  "build/documento.bcf" 1756269792.82291 115472 579f22ca18d983c5d428676fa8a50848 "pdflatex"
+  "build/documento.bcf" 1756274950.26959 115472 579f22ca18d983c5d428676fa8a50848 "pdflatex"
   (generated)
   "build/documento.bbl"
   "build/documento.blg"
   (rewritten before read)
-["pdflatex"] 1756269790.59479 "/Users/kariellycarvalho/Documents/Registro de Ponto/RTS - Karielly/documento.tex" "build/documento.pdf" "documento" 1756269792.93821 0
+["pdflatex"] 1756274947.94561 "/Users/kariellycarvalho/Documents/Registro de Ponto/RTS - Karielly/documento.tex" "build/documento.pdf" "documento" 1756274950.39497 0
   "/Users/kariellycarvalho/Documents/Registro de Ponto/RTS - Karielly/documento.tex" 1755897379.24822 667 d28e26cf7c9cec4963280b76ba8813f7 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -287,14 +287,14 @@
   "abntex-ifpi/Logo_ifpi.png" 1755905510 23290 f6f08ad8d9a60eae2bb970465bdc3068 ""
   "abntex-ifpi/abntex-ifpi.sty" 1755905510 10236 0efc2d99c590480d71bc2be4fad682ea ""
   "abntex-ifpi/tikz-uml.sty" 1755905510 302703 ed2f9b5dd419a64f254ecbf6a6653c7f ""
-  "build/documento.aux" 1756269792.81034 12146 0906db73a11b302eb6a0f131d59e7133 "pdflatex"
+  "build/documento.aux" 1756274950.25638 13923 3bc3d77ccf7940ba9c90f5865f03f20e "pdflatex"
   "build/documento.bbl" 1755896589.75971 18890 96f9541396ea81ce580406b07c632a05 "biber build/documento"
-  "build/documento.lot" 1756269792.82403 174 51d264cc659442ae0eee3ca602c447b1 "pdflatex"
-  "build/documento.run.xml" 1756269792.82395 2547 7b222dc79294bba1b221d06e66558f57 "pdflatex"
-  "build/documento.toc" 1756269792.82405 2140 6c9ce8ea868d2712e03a62fc11e78a78 "pdflatex"
-  "build/estrutura/pos-textual.aux" 1756269792.80874 8470 d8ea9d2ce2c560909bfa777c97c36aa5 "pdflatex"
+  "build/documento.lot" 1756274950.2705 174 51d264cc659442ae0eee3ca602c447b1 "pdflatex"
+  "build/documento.run.xml" 1756274950.27043 2547 7b222dc79294bba1b221d06e66558f57 "pdflatex"
+  "build/documento.toc" 1756274950.27052 2471 1323102d6cf1cb2ce1b5f9a8b6d7fcae "pdflatex"
+  "build/estrutura/pos-textual.aux" 1756274950.2549 8470 1e2a97af3be5fde4c8801354066fb43b "pdflatex"
   "capitulos/consideracoes.tex" 1755905510 479 c3af707a97017d2abfe7741ae06ee27e ""
-  "capitulos/introducao.tex" 1756269790.396 6336 7c93f9d3f0a90eb99948806476445a5e ""
+  "capitulos/introducao.tex" 1756274947.70204 10132 713c4d5b2ad3c5cd487c685b5ba11471 ""
   "capitulos/modelagem-projeto.tex" 1755905510 4348 dc3fa360cb59f25edf62b425171a98ed ""
   "capitulos/software.tex" 1755905510 756 ad5ad8cf6d197d40a7cba2af15c44b65 ""
   "capitulos/tecnologias.tex" 1755905510 3133 0c39fae4725e3131235b01f9b628b4e1 ""
