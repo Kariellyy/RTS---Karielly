@@ -44,6 +44,70 @@
       \field{title}{Sistema de controle de ponto auxiliado por aplicativo Android}
       \field{year}{2016}
     \endentry
+    \entry{PostgreSQLvsMongoDB_AWS}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=3eb2c1a57a8160029f036e3dcbf84bf1}{%
+           family={{Amazon Web Services}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{bibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorbibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authornamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \field{extraname}{1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: 27 ago. 2025}
+      \field{title}{Qual é a diferença entre o MongoDB e o PostgreSQL?}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://aws.amazon.com/pt/compare/the-difference-between-mongodb-and-postgresql/
+      \endverb
+      \verb{url}
+      \verb https://aws.amazon.com/pt/compare/the-difference-between-mongodb-and-postgresql/
+      \endverb
+    \endentry
+    \entry{PostgreSQLACID}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=3eb2c1a57a8160029f036e3dcbf84bf1}{%
+           family={{Amazon Web Services}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{bibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorbibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authornamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \field{extraname}{2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: 27 ago. 2025}
+      \field{title}{Qual é a diferença entre o MySQL e o PostgreSQL?}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://aws.amazon.com/pt/compare/the-difference-between-mysql-vs-postgresql/
+      \endverb
+      \verb{url}
+      \verb https://aws.amazon.com/pt/compare/the-difference-between-mysql-vs-postgresql/
+      \endverb
+    \endentry
     \entry{brasil1943}{book}{}{}
       \name{author}{1}{}{%
         {{hash=aa43becf0d21463be7540bf3b40bf243}{%
@@ -69,6 +133,130 @@
       \field{labeltitlesource}{title}
       \field{title}{Consolidação das Leis do Trabalho (CLT)}
       \field{year}{1943}
+    \endentry
+    \entry{Portaria671Contabeis}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=63e8e41cba13a6e1cb08a766420e2a57}{%
+           family={Cardoso},
+           familyi={C\bibinitperiod},
+           given={Eluth},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{63e8e41cba13a6e1cb08a766420e2a57}
+      \strng{fullhash}{63e8e41cba13a6e1cb08a766420e2a57}
+      \strng{fullhashraw}{63e8e41cba13a6e1cb08a766420e2a57}
+      \strng{bibnamehash}{63e8e41cba13a6e1cb08a766420e2a57}
+      \strng{authorbibnamehash}{63e8e41cba13a6e1cb08a766420e2a57}
+      \strng{authornamehash}{63e8e41cba13a6e1cb08a766420e2a57}
+      \strng{authorfullhash}{63e8e41cba13a6e1cb08a766420e2a57}
+      \strng{authorfullhashraw}{63e8e41cba13a6e1cb08a766420e2a57}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: 27 ago. 2025}
+      \field{title}{Portaria 671: regras para marcação de ponto nas empresas}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.contabeis.com.br/noticias/71604/portaria-671-regras-para-marcacao-de-ponto-nas-empresas/
+      \endverb
+      \verb{url}
+      \verb https://www.contabeis.com.br/noticias/71604/portaria-671-regras-para-marcacao-de-ponto-nas-empresas/
+      \endverb
+    \endentry
+    \entry{MVP_RDStation}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=4f72fb1752d05d581a4f5663dc3c029a}{%
+           family={Corrales},
+           familyi={C\bibinitperiod},
+           given={Victor},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{4f72fb1752d05d581a4f5663dc3c029a}
+      \strng{fullhash}{4f72fb1752d05d581a4f5663dc3c029a}
+      \strng{fullhashraw}{4f72fb1752d05d581a4f5663dc3c029a}
+      \strng{bibnamehash}{4f72fb1752d05d581a4f5663dc3c029a}
+      \strng{authorbibnamehash}{4f72fb1752d05d581a4f5663dc3c029a}
+      \strng{authornamehash}{4f72fb1752d05d581a4f5663dc3c029a}
+      \strng{authorfullhash}{4f72fb1752d05d581a4f5663dc3c029a}
+      \strng{authorfullhashraw}{4f72fb1752d05d581a4f5663dc3c029a}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: 27 ago. 2025}
+      \field{title}{MVP (Mínimo Produto Viável): o que é, como fazer e exemplos para se inspirar}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.rdstation.com/blog/marketing/mvp-minimo-produto-viavel/
+      \endverb
+      \verb{url}
+      \verb https://www.rdstation.com/blog/marketing/mvp-minimo-produto-viavel/
+      \endverb
+    \endentry
+    \entry{NestJSModular}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=042079960fb5bd0284100876a6567df6}{%
+           family={{Dev\&Deliver}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{042079960fb5bd0284100876a6567df6}
+      \strng{fullhash}{042079960fb5bd0284100876a6567df6}
+      \strng{fullhashraw}{042079960fb5bd0284100876a6567df6}
+      \strng{bibnamehash}{042079960fb5bd0284100876a6567df6}
+      \strng{authorbibnamehash}{042079960fb5bd0284100876a6567df6}
+      \strng{authornamehash}{042079960fb5bd0284100876a6567df6}
+      \strng{authorfullhash}{042079960fb5bd0284100876a6567df6}
+      \strng{authorfullhashraw}{042079960fb5bd0284100876a6567df6}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: 27 ago. 2025}
+      \field{title}{Level up Your Backend: A C-Suite Guide to Mastering Modular Architecture in Nest.js Applications}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://devanddeliver.com/blog/backend/level-up-your-backend-a-c-suite-guide-to-mastering-modular-architecture-in-nest-js-applications
+      \endverb
+      \verb{url}
+      \verb https://devanddeliver.com/blog/backend/level-up-your-backend-a-c-suite-guide-to-mastering-modular-architecture-in-nest-js-applications
+      \endverb
+    \endentry
+    \entry{LGPDeGeolocalizacao}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=012b11265b94945f7a1390a07776e625}{%
+           family={{Factorial}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{012b11265b94945f7a1390a07776e625}
+      \strng{fullhash}{012b11265b94945f7a1390a07776e625}
+      \strng{fullhashraw}{012b11265b94945f7a1390a07776e625}
+      \strng{bibnamehash}{012b11265b94945f7a1390a07776e625}
+      \strng{authorbibnamehash}{012b11265b94945f7a1390a07776e625}
+      \strng{authornamehash}{012b11265b94945f7a1390a07776e625}
+      \strng{authorfullhash}{012b11265b94945f7a1390a07776e625}
+      \strng{authorfullhashraw}{012b11265b94945f7a1390a07776e625}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: 27 ago. 2025}
+      \field{title}{Ponto por geolocalização: é legal? O que diz a lei?}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://factorialhr.com.br/blog/ponto-por-geolocalizacao/
+      \endverb
+      \verb{url}
+      \verb https://factorialhr.com.br/blog/ponto-por-geolocalizacao/
+      \endverb
     \endentry
     \entry{FlorindoBianchi2022}{thesis}{}{}
       \name{author}{2}{}{%
@@ -109,6 +297,66 @@
       \field{type}{Trabalho de Graduação}
       \field{year}{2022}
     \endentry
+    \entry{RiscosPontoManual}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=d9f3adc58dd3fd81733e583683b130ca}{%
+           family={{forpeople}},
+           familyi={f\bibinitperiod}}}%
+      }
+      \strng{namehash}{d9f3adc58dd3fd81733e583683b130ca}
+      \strng{fullhash}{d9f3adc58dd3fd81733e583683b130ca}
+      \strng{fullhashraw}{d9f3adc58dd3fd81733e583683b130ca}
+      \strng{bibnamehash}{d9f3adc58dd3fd81733e583683b130ca}
+      \strng{authorbibnamehash}{d9f3adc58dd3fd81733e583683b130ca}
+      \strng{authornamehash}{d9f3adc58dd3fd81733e583683b130ca}
+      \strng{authorfullhash}{d9f3adc58dd3fd81733e583683b130ca}
+      \strng{authorfullhashraw}{d9f3adc58dd3fd81733e583683b130ca}
+      \field{sortinit}{f}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: 27 ago. 2025}
+      \field{title}{Controle de ponto manual: entenda os riscos desse sistema}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://forpeople.io/recursos-humanos/controle-de-ponto-manual-entenda-os-riscos-desse-sistema/
+      \endverb
+      \verb{url}
+      \verb https://forpeople.io/recursos-humanos/controle-de-ponto-manual-entenda-os-riscos-desse-sistema/
+      \endverb
+    \endentry
+    \entry{VantagensPontoDigital}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=5073211fb2f0947ac0be92499e8134df}{%
+           family={{Geovictoria}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{5073211fb2f0947ac0be92499e8134df}
+      \strng{fullhash}{5073211fb2f0947ac0be92499e8134df}
+      \strng{fullhashraw}{5073211fb2f0947ac0be92499e8134df}
+      \strng{bibnamehash}{5073211fb2f0947ac0be92499e8134df}
+      \strng{authorbibnamehash}{5073211fb2f0947ac0be92499e8134df}
+      \strng{authornamehash}{5073211fb2f0947ac0be92499e8134df}
+      \strng{authorfullhash}{5073211fb2f0947ac0be92499e8134df}
+      \strng{authorfullhashraw}{5073211fb2f0947ac0be92499e8134df}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: 27 ago. 2025}
+      \field{title}{Ponto manual ou digital: qual o melhor para a sua empresa?}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.geovictoria.com.br/br/blog/ponto-manual-ou-digital-qual-o-melhor-para-sua-empresa/
+      \endverb
+      \verb{url}
+      \verb https://www.geovictoria.com.br/br/blog/ponto-manual-ou-digital-qual-o-melhor-para-sua-empresa/
+      \endverb
+    \endentry
     \entry{gomes2023}{thesis}{}{}
       \name{author}{1}{}{%
         {{hash=a4ca727d8e1ca3fce7d00736f1fd0cd7}{%
@@ -138,6 +386,36 @@
       \field{title}{PontoUp - Sistema de Gerenciamento e Registro de Ponto Eletrônico}
       \field{type}{phdthesis}
       \field{year}{2023}
+    \endentry
+    \entry{RBAC_IBM}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=cbf44511d041dc6d1dd73cc0c033122c}{%
+           family={{IBM}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{fullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{fullhashraw}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{bibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorbibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authornamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorfullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorfullhashraw}{cbf44511d041dc6d1dd73cc0c033122c}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: 27 ago. 2025}
+      \field{title}{O que é o controle de acesso baseado em funções (RBAC)?}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.ibm.com/br-pt/think/topics/rbac
+      \endverb
+      \verb{url}
+      \verb https://www.ibm.com/br-pt/think/topics/rbac
+      \endverb
     \endentry
     \entry{Longo2019}{inproceedings}{}{}
       \name{author}{2}{}{%
@@ -321,6 +599,66 @@
       \field{title}{NestJS - A progressive Node.js framework for building efficient, reliable and scalable server-side applications}
       \field{year}{2025}
     \endentry
+    \entry{ReconhecimentoFacialPonto}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=9f64fc188b636156efc12e4579b355e8}{%
+           family={{Oitchau}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{9f64fc188b636156efc12e4579b355e8}
+      \strng{fullhash}{9f64fc188b636156efc12e4579b355e8}
+      \strng{fullhashraw}{9f64fc188b636156efc12e4579b355e8}
+      \strng{bibnamehash}{9f64fc188b636156efc12e4579b355e8}
+      \strng{authorbibnamehash}{9f64fc188b636156efc12e4579b355e8}
+      \strng{authornamehash}{9f64fc188b636156efc12e4579b355e8}
+      \strng{authorfullhash}{9f64fc188b636156efc12e4579b355e8}
+      \strng{authorfullhashraw}{9f64fc188b636156efc12e4579b355e8}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: 27 ago. 2025}
+      \field{title}{Como fazer controle de ponto por reconhecimento facial?}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.oitchau.com.br/blog/como-fazer-controle-de-ponto-por-reconhecimento-facial/
+      \endverb
+      \verb{url}
+      \verb https://www.oitchau.com.br/blog/como-fazer-controle-de-ponto-por-reconhecimento-facial/
+      \endverb
+    \endentry
+    \entry{JWTVulnerabilities}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=1675e90bb3b7b77119b16652c940e95f}{%
+           family={{PentesterLab}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{1675e90bb3b7b77119b16652c940e95f}
+      \strng{fullhash}{1675e90bb3b7b77119b16652c940e95f}
+      \strng{fullhashraw}{1675e90bb3b7b77119b16652c940e95f}
+      \strng{bibnamehash}{1675e90bb3b7b77119b16652c940e95f}
+      \strng{authorbibnamehash}{1675e90bb3b7b77119b16652c940e95f}
+      \strng{authornamehash}{1675e90bb3b7b77119b16652c940e95f}
+      \strng{authorfullhash}{1675e90bb3b7b77119b16652c940e95f}
+      \strng{authorfullhashraw}{1675e90bb3b7b77119b16652c940e95f}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: 27 ago. 2025}
+      \field{title}{JWT Vulnerabilities \& Attacks: The Ultimate Guide}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://pentesterlab.com/blog/jwt-vulnerabilities-attacks-guide
+      \endverb
+      \verb{url}
+      \verb https://pentesterlab.com/blog/jwt-vulnerabilities-attacks-guide
+      \endverb
+    \endentry
     \entry{prisma}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=80724a2247d77a729278af32df62da8c}{%
@@ -345,6 +683,185 @@
       \field{note}{Acesso em: 27 mar. 2025}
       \field{title}{Prisma - Next-generation Node.js and TypeScript ORM}
       \field{year}{2025}
+    \endentry
+    \entry{compareplanodesaude}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=235cc086672d93a062657658fa6a2bb1}{%
+           family={Seguros},
+           familyi={S\bibinitperiod},
+           given={Equipe\bibnamedelima Compare},
+           giveni={E\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{235cc086672d93a062657658fa6a2bb1}
+      \strng{fullhash}{235cc086672d93a062657658fa6a2bb1}
+      \strng{fullhashraw}{235cc086672d93a062657658fa6a2bb1}
+      \strng{bibnamehash}{235cc086672d93a062657658fa6a2bb1}
+      \strng{authorbibnamehash}{235cc086672d93a062657658fa6a2bb1}
+      \strng{authornamehash}{235cc086672d93a062657658fa6a2bb1}
+      \strng{authorfullhash}{235cc086672d93a062657658fa6a2bb1}
+      \strng{authorfullhashraw}{235cc086672d93a062657658fa6a2bb1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://compareplanodesaude.com.br/empresarial/clt-beneficios/importancia-jornada-trabalho-regulada-clt/}}
+      \field{note}{Acessado em: 2025-08-27}
+      \field{title}{A Importância da Jornada de Trabalho Regulada pela CLT}
+      \field{year}{2024}
+    \endentry
+    \entry{GPSControlePonto}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=a057bd8e112898b095581ed87fbace9b}{%
+           family={{Senior Sistemas}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{a057bd8e112898b095581ed87fbace9b}
+      \strng{fullhash}{a057bd8e112898b095581ed87fbace9b}
+      \strng{fullhashraw}{a057bd8e112898b095581ed87fbace9b}
+      \strng{bibnamehash}{a057bd8e112898b095581ed87fbace9b}
+      \strng{authorbibnamehash}{a057bd8e112898b095581ed87fbace9b}
+      \strng{authornamehash}{a057bd8e112898b095581ed87fbace9b}
+      \strng{authorfullhash}{a057bd8e112898b095581ed87fbace9b}
+      \strng{authorfullhashraw}{a057bd8e112898b095581ed87fbace9b}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: 27 ago. 2025}
+      \field{title}{Controle de ponto com geolocalização: como funciona e quais as vantagens}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.senior.com.br/blog/controle-de-ponto-geolocalizacao
+      \endverb
+      \verb{url}
+      \verb https://www.senior.com.br/blog/controle-de-ponto-geolocalizacao
+      \endverb
+    \endentry
+    \entry{NextJsvsAngularVue_Brilworks}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=f67e0acda809e86c976fad3a754e81ab}{%
+           family={Shah},
+           familyi={S\bibinitperiod},
+           given={Chintan},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{f67e0acda809e86c976fad3a754e81ab}
+      \strng{fullhash}{f67e0acda809e86c976fad3a754e81ab}
+      \strng{fullhashraw}{f67e0acda809e86c976fad3a754e81ab}
+      \strng{bibnamehash}{f67e0acda809e86c976fad3a754e81ab}
+      \strng{authorbibnamehash}{f67e0acda809e86c976fad3a754e81ab}
+      \strng{authornamehash}{f67e0acda809e86c976fad3a754e81ab}
+      \strng{authorfullhash}{f67e0acda809e86c976fad3a754e81ab}
+      \strng{authorfullhashraw}{f67e0acda809e86c976fad3a754e81ab}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: 27 ago. 2025}
+      \field{title}{Next.js vs Angular vs Vue.js: A Detailed Comparison}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.brilworks.com/blog/javascript-web-frameworks-comparison/
+      \endverb
+      \verb{url}
+      \verb https://www.brilworks.com/blog/javascript-web-frameworks-comparison/
+      \endverb
+    \endentry
+    \entry{ExemplosMVP}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=fd8934f5f32e72d3b0a77d023eb3d0ba}{%
+           family={{SoftKraft}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{fd8934f5f32e72d3b0a77d023eb3d0ba}
+      \strng{fullhash}{fd8934f5f32e72d3b0a77d023eb3d0ba}
+      \strng{fullhashraw}{fd8934f5f32e72d3b0a77d023eb3d0ba}
+      \strng{bibnamehash}{fd8934f5f32e72d3b0a77d023eb3d0ba}
+      \strng{authorbibnamehash}{fd8934f5f32e72d3b0a77d023eb3d0ba}
+      \strng{authornamehash}{fd8934f5f32e72d3b0a77d023eb3d0ba}
+      \strng{authorfullhash}{fd8934f5f32e72d3b0a77d023eb3d0ba}
+      \strng{authorfullhashraw}{fd8934f5f32e72d3b0a77d023eb3d0ba}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: 27 ago. 2025}
+      \field{title}{11 Minimum Viable Product Examples: From Zero to Hero}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.softkraft.co/minimum-viable-product-examples/
+      \endverb
+      \verb{url}
+      \verb https://www.softkraft.co/minimum-viable-product-examples/
+      \endverb
+    \endentry
+    \entry{JWTvsCookies}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=84d7dc19766c446f5e4084e8fce87f82}{%
+           family={{Stack Overflow}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{84d7dc19766c446f5e4084e8fce87f82}
+      \strng{fullhash}{84d7dc19766c446f5e4084e8fce87f82}
+      \strng{fullhashraw}{84d7dc19766c446f5e4084e8fce87f82}
+      \strng{bibnamehash}{84d7dc19766c446f5e4084e8fce87f82}
+      \strng{authorbibnamehash}{84d7dc19766c446f5e4084e8fce87f82}
+      \strng{authornamehash}{84d7dc19766c446f5e4084e8fce87f82}
+      \strng{authorfullhash}{84d7dc19766c446f5e4084e8fce87f82}
+      \strng{authorfullhashraw}{84d7dc19766c446f5e4084e8fce87f82}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: 27 ago. 2025}
+      \field{title}{Qual método usar para deixar um usuário logado? JWT (Cookie vs Session)}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://pt.stackoverflow.com/questions/376924/qual-m%C3%A9todo-usar-para-deixar-um-usu%C3%A1rio-logado-jwt-cookie-vs-session
+      \endverb
+      \verb{url}
+      \verb https://pt.stackoverflow.com/questions/376924/qual-m%C3%A9todo-usar-para-deixar-um-usu%C3%A1rio-logado-jwt-cookie-vs-session
+      \endverb
+    \endentry
+    \entry{SSReSSG}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=9a1d630e0434b8fc0ec3f1f34bdc10f6}{%
+           family={{Strapi}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{9a1d630e0434b8fc0ec3f1f34bdc10f6}
+      \strng{fullhash}{9a1d630e0434b8fc0ec3f1f34bdc10f6}
+      \strng{fullhashraw}{9a1d630e0434b8fc0ec3f1f34bdc10f6}
+      \strng{bibnamehash}{9a1d630e0434b8fc0ec3f1f34bdc10f6}
+      \strng{authorbibnamehash}{9a1d630e0434b8fc0ec3f1f34bdc10f6}
+      \strng{authornamehash}{9a1d630e0434b8fc0ec3f1f34bdc10f6}
+      \strng{authorfullhash}{9a1d630e0434b8fc0ec3f1f34bdc10f6}
+      \strng{authorfullhashraw}{9a1d630e0434b8fc0ec3f1f34bdc10f6}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: 27 ago. 2025}
+      \field{title}{SSR vs SSG in Next.js: Differences, Advantages and Use Cases}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://strapi.io/blog/ssr-vs-ssg-in-nextjs-differences-advantages-and-use-cases
+      \endverb
+      \verb{url}
+      \verb https://strapi.io/blog/ssr-vs-ssg-in-nextjs-differences-advantages-and-use-cases
+      \endverb
     \endentry
     \entry{tailwindcss}{misc}{}{}
       \name{author}{1}{}{%
@@ -395,6 +912,68 @@
       \field{note}{Acesso em: 27 mar. 2025}
       \field{title}{PostgreSQL - The world's most advanced open source database}
       \field{year}{2025}
+    \endentry
+    \entry{RequisitosREPP}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=1b02510b2b50e73ffed9bac3a8b0b752}{%
+           family={{TOTVS}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{1b02510b2b50e73ffed9bac3a8b0b752}
+      \strng{fullhash}{1b02510b2b50e73ffed9bac3a8b0b752}
+      \strng{fullhashraw}{1b02510b2b50e73ffed9bac3a8b0b752}
+      \strng{bibnamehash}{1b02510b2b50e73ffed9bac3a8b0b752}
+      \strng{authorbibnamehash}{1b02510b2b50e73ffed9bac3a8b0b752}
+      \strng{authornamehash}{1b02510b2b50e73ffed9bac3a8b0b752}
+      \strng{authorfullhash}{1b02510b2b50e73ffed9bac3a8b0b752}
+      \strng{authorfullhashraw}{1b02510b2b50e73ffed9bac3a8b0b752}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: 27 ago. 2025}
+      \field{title}{Portaria 671/21: o que é, mudanças e guia completo}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://espacolegislacao.totvs.com/portaria-671/
+      \endverb
+      \verb{url}
+      \verb https://espacolegislacao.totvs.com/portaria-671/
+      \endverb
+    \endentry
+    \entry{TendenciasRH2025}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=0ea0d8264297f9692e59396933a71a84}{%
+           family={Vala},
+           familyi={V\bibinitperiod},
+           given={Ana},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{0ea0d8264297f9692e59396933a71a84}
+      \strng{fullhash}{0ea0d8264297f9692e59396933a71a84}
+      \strng{fullhashraw}{0ea0d8264297f9692e59396933a71a84}
+      \strng{bibnamehash}{0ea0d8264297f9692e59396933a71a84}
+      \strng{authorbibnamehash}{0ea0d8264297f9692e59396933a71a84}
+      \strng{authornamehash}{0ea0d8264297f9692e59396933a71a84}
+      \strng{authorfullhash}{0ea0d8264297f9692e59396933a71a84}
+      \strng{authorfullhashraw}{0ea0d8264297f9692e59396933a71a84}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: 27 ago. 2025}
+      \field{title}{Tendências de RH para 2025: o que esperar do futuro do trabalho?}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.feedz.com.br/blog/tendencias-de-rh-2025/
+      \endverb
+      \verb{url}
+      \verb https://www.feedz.com.br/blog/tendencias-de-rh-2025/
+      \endverb
     \endentry
     \entry{nextjs}{misc}{}{}
       \name{author}{1}{}{%

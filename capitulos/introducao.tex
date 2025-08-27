@@ -36,23 +36,35 @@ Desenvolver um MVP (Minimum Viable Product) de sistema web de Registro de Ponto 
     \item Construir o painel gerencial, englobando a gestão de funcionários, o fluxo de aprovação de justificativas, o cálculo automático de banco de horas e a emissão de relatórios.
 \end{itemize}
 
-\subsection{Metodologia}
+\section{Metodologia}
 
 A metodologia adotada para este projeto combinou uma pesquisa exploratória e qualitativa com uma abordagem ágil de engenharia de software, estruturando o trabalho em duas frentes principais e complementares: a primeira, focada no embasamento teórico e na análise de mercado para a fundamentação do projeto, e a segunda, na construção prática e iterativa do Mínimo Produto Viável (MVP).
 
-\subsubsection{Procedimentos de Pesquisa Exploratória}
+% \subsection{Classificação da Pesquisa}
 
-\textbf{Pesquisa Bibliográfica.} A pesquisa bibliográfica foi fundamental para compreender os conceitos fundamentais de controle de ponto, legislação trabalhista brasileira e tecnologias de geolocalização. Foram analisados artigos científicos, livros técnicos e documentações oficiais sobre sistemas de registro de ponto, com foco especial na Consolidação das Leis do Trabalho (CLT) e suas exigências para empresas com mais de 20 funcionários. A pesquisa também abrangeu estudos sobre usabilidade em sistemas móveis e boas práticas de desenvolvimento web.
+% O presente trabalho caracteriza-se como uma pesquisa de natureza \textbf{aplicada}, pois visa à criação de um produto tecnológico — um Mínimo Produto Viável (MVP) — para a solução de um problema prático de mercado: o controle de ponto para pequenas e médias empresas. Do ponto de vista dos objetivos, a pesquisa é \textbf{exploratória}, uma vez que investigou o cenário de ferramentas concorrentes para identificar lacunas, e \textbf{descritiva}, ao documentar detalhadamente todo o processo de desenvolvimento e a arquitetura do software. Por fim, quanto à abordagem, o estudo é predominantemente \textbf{qualitativo}, com foco na análise das funcionalidades implementadas, na qualidade da arquitetura de software e na avaliação heurística da interface, sem a pretensão de coletar dados estatísticos de uso.
 
-\textbf{Análise de Mercado e Soluções Concorrentes.} Foi realizada uma análise exploratória das principais ferramentas digitais de registro de ponto disponíveis no mercado brasileiro, identificando suas funcionalidades, limitações e requisitos para garantir um controle eficiente da jornada de trabalho. Esta pesquisa permitiu identificar lacunas no mercado, especialmente para pequenas e médias empresas que não possuem recursos para sistemas complexos e caros. A análise incluiu sistemas como PontoTel, Tangerino, PontoMais e outros, mapeando suas características técnicas, custos e adequação para diferentes portes de empresa.
+\subsection{Procedimentos de Pesquisa Exploratória}
 
-\subsubsection{Metodologia de Desenvolvimento do Software (MVP)}
+\subsubsection{Pesquisa Bibliográfica} 
 
-\textbf{Modelo de Processo de Desenvolvimento.} O desenvolvimento do MVP seguiu uma abordagem ágil com prototipagem evolutiva, utilizando a metodologia Frontend-First — uma estratégia que prioriza a construção da experiência do usuário, desenvolvendo inicialmente todas as interfaces com dados estáticos (mockados) utilizando Next.js com TypeScript e componentes Radix UI. O backend foi desenvolvido posteriormente com NestJS, construindo a API de forma direcionada para atender às necessidades já estabelecidas no frontend.
+A pesquisa bibliográfica foi fundamental para compreender os conceitos fundamentais de controle de ponto, legislação trabalhista brasileira e tecnologias de geolocalização. Foram analisados artigos científicos, livros técnicos e documentações oficiais sobre sistemas de registro de ponto, com foco especial na Consolidação das Leis do Trabalho (CLT) e suas exigências para empresas com mais de 20 funcionários. A pesquisa também abrangeu estudos sobre usabilidade em sistemas móveis e boas práticas de desenvolvimento web.
+
+\subsubsection{Análise de Mercado e Soluções Concorrentes}
+
+Foi realizada uma análise exploratória das principais ferramentas digitais de registro de ponto disponíveis no mercado brasileiro, identificando suas funcionalidades, limitações e requisitos para garantir um controle eficiente da jornada de trabalho. Esta pesquisa permitiu identificar lacunas no mercado, especialmente para pequenas e médias empresas que não possuem recursos para sistemas complexos e caros. A análise incluiu sistemas como PontoTel, Tangerino, PontoMais e outros, mapeando suas características técnicas, custos e adequação para diferentes portes de empresa.
+
+\subsection{Metodologia de Desenvolvimento do Software (MVP)}
+
+\subsubsection{Modelo de Processo de Desenvolvimento}
+
+O desenvolvimento do MVP seguiu uma abordagem ágil com prototipagem evolutiva, utilizando a metodologia Frontend-First — uma estratégia que prioriza a construção da experiência do usuário, desenvolvendo inicialmente todas as interfaces com dados estáticos (mockados) utilizando Next.js com TypeScript e componentes Radix UI. O backend foi desenvolvido posteriormente com NestJS, construindo a API de forma direcionada para atender às necessidades já estabelecidas no frontend.
 
 A arquitetura foi desenvolvida seguindo princípios de separação de responsabilidades, com frontend e backend como serviços independentes, utilizando PostgreSQL como banco de dados principal e implementando autenticação JWT para controle de acesso diferenciado entre funcionários e gestores.
 
-\textbf{Verificação Técnica e Testes.} Para a verificação do MVP, considerando o estágio de desenvolvimento, foi implementada uma abordagem de verificação interna em duas frentes. A primeira consistiu na Verificação de Requisitos Funcionais, onde cada funcionalidade especificada foi testada sistematicamente para garantir seu correto funcionamento. Os principais módulos verificados foram:
+\subsubsection{Verificação Técnica e Testes} 
+
+Para a verificação do MVP, considerando o estágio de desenvolvimento, foi implementada uma abordagem de verificação interna em duas frentes. A primeira consistiu na Verificação de Requisitos Funcionais, onde cada funcionalidade especificada foi testada sistematicamente para garantir seu correto funcionamento. Os principais módulos verificados foram:
 \begin{itemize}
     \item Registro de ponto com validação por geolocalização;
     \item Gestão de funcionários, perfis e departamentos;

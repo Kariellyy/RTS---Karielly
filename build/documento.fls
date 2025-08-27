@@ -679,6 +679,16 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ts1phv.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ts1phv.fd
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvr8c.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/adobe/helvetic/phvr8c.vf
+INPUT ./capitulos/fundamentacao-teorica.tex
+INPUT ./capitulos/fundamentacao-teorica.tex
+INPUT ./capitulos/fundamentacao-teorica.tex
+INPUT ./capitulos/fundamentacao-teorica.tex
+INPUT capitulos/fundamentacao-teorica.tex
+INPUT ./capitulos/requisitos.tex
+INPUT ./capitulos/requisitos.tex
+INPUT ./capitulos/requisitos.tex
+INPUT ./capitulos/requisitos.tex
+INPUT capitulos/requisitos.tex
 INPUT ./capitulos/tecnologias.tex
 INPUT ./capitulos/tecnologias.tex
 INPUT ./capitulos/tecnologias.tex

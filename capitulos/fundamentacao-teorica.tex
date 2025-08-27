@@ -1,0 +1,57 @@
+\chapter{REFERENCIAL TEÓRICO}
+\label{cha:referencial-teorico}
+
+\section{Controle de Jornada de Trabalho}
+\par O controle da jornada de trabalho é um pilar fundamental na relação entre empregadores e empregados, sendo essencial para garantir a conformidade com a legislação trabalhista, assegurar a remuneração correta das horas trabalhadas e proteger os direitos de ambas as partes com transparência \cite{compareplanodesaude}. A evolução dos métodos de controle reflete diretamente o avanço tecnológico e as mudanças nas dinâmicas de trabalho.
+
+\subsection{Evolução dos Sistemas de Ponto: Do Manual ao Digital}
+\par Historicamente, o controle de jornada era realizado por meios manuais, como o livro de ponto ou o relógio cartográfico. Tais métodos, embora simples, são extremamente vulneráveis a fraudes, erros de preenchimento e rasuras, gerando insegurança jurídica e administrativa. A manipulação intencional ou o simples erro humano no registro manual podem resultar em pagamentos incorretos de horas extras, adicional noturno e outras verbas, culminando em prejuízos financeiros e um aumento significativo no risco de ações trabalhistas \cite{RiscosPontoManual}.
+
+\par A transição para sistemas digitais representa um avanço substancial em segurança, precisão e eficiência. Ao automatizar a coleta e o cálculo das horas, os sistemas eletrônicos minimizam a ocorrência de erros e fraudes, além de fornecerem dados em tempo real para a gestão de equipes, otimizando processos do departamento de Recursos Humanos (RH) e reduzindo custos operacionais \cite{VantagensPontoDigital}.
+
+\subsection{Legislação Brasileira e a Portaria 671/2021}
+\par A Consolidação das Leis do Trabalho (CLT), em seu Artigo 74, estabelece a obrigatoriedade do controle de jornada para empresas com mais de 20 funcionários. A regulamentação dos sistemas eletrônicos de ponto, por sua vez, foi modernizada pela Portaria 671 do Ministério do Trabalho e Previdência (MTP), de novembro de 2021, que unificou e substituiu as portarias anteriores (1510 e 373), simplificando as regras e introduzindo novas modalidades de registro \cite{Portaria671Contabeis}.
+
+\par A portaria define três tipos principais de Registradores Eletrônicos de Ponto (REP):
+\begin{itemize}
+    \item \textbf{REP-C (Convencional):} O relógio de ponto tradicional, físico, que emite comprovantes impressos.
+    \item \textbf{REP-A (Alternativo):} Sistemas e aplicativos online que permitem o registro via computador ou dispositivos móveis, validados por Convenção ou Acordo Coletivo de Trabalho.
+    \item \textbf{REP-P (Programa):} A categoria mais moderna, que engloba softwares e sistemas em nuvem para registro de ponto, incluindo coletores de marcações, armazenamento de dados e o programa de tratamento de ponto. Esta modalidade exige a emissão de comprovante de registro de ponto por meio eletrônico ou impresso e a geração do Arquivo Fonte de Dados (AFD) conforme padrões legais \cite{RequisitosREPP}.
+\end{itemize}
+\par O sistema desenvolvido neste projeto, que utiliza um aplicativo de smartphone com geolocalização, enquadra-se na categoria \textbf{REP-P}, por se tratar de um programa de computador que executa o registro e o tratamento dos dados de jornada de forma digital e segura.
+
+\section{Tecnologias Habilitadoras}
+
+\subsection{Geolocalização (GPS) no Controle de Frequência}
+\par A tecnologia de geolocalização, popularizada pelo Sistema de Posicionamento Global (GPS), tornou-se uma ferramenta estratégica para empresas com equipes externas, em regime de home office ou em locais de trabalho variáveis. Ao integrar o GPS a um aplicativo de ponto, o sistema captura as coordenadas geográficas (latitude e longitude) do colaborador no exato momento da marcação \cite{GPSControlePonto}.
+
+\par Essa funcionalidade oferece um nível adicional de segurança e transparência, permitindo ao gestor verificar se o registro foi realizado dentro de um perímetro pré-autorizado, como a sede da empresa ou o local de um cliente. Isso inibe fraudes comuns, como o buddy punching — prática na qual um colega registra o ponto pelo outro — e fornece um respaldo jurídico robusto para o empregador \cite{GPSControlePonto}.
+
+\par Sob a ótica da Lei Geral de Proteção de Dados (LGPD), o uso da geolocalização para controle de ponto é legal, desde que o tratamento dos dados esteja estritamente ligado à finalidade de controle da jornada de trabalho. É imperativo que o colaborador seja informado de maneira clara sobre a coleta desses dados e que a empresa colete apenas as informações estritamente necessárias, garantindo a privacidade do funcionário fora do horário de trabalho \cite{LGPDeGeolocalizacao}.
+
+\subsection{Metodologia de Desenvolvimento de Software: MVP}
+\par A abordagem de desenvolvimento de um Produto Mínimo Viável (MVP, do inglês \textit{Minimum Viable Product}) foi adotada neste projeto. A estratégia consiste em construir uma versão inicial do sistema contendo apenas as funcionalidades essenciais para resolver o problema central do público-alvo \cite{MVP_RDStation}. O objetivo é lançar o produto rapidamente no mercado para coletar feedback real de usuários e, a partir daí, orientar as próximas fases do desenvolvimento de forma iterativa.
+
+\par Os principais benefícios dessa metodologia incluem a redução de riscos e custos, a aceleração do ciclo de aprendizado da equipe e a garantia de que o produto final esteja verdadeiramente alinhado às necessidades do mercado. Empresas como Dropbox, Foursquare e Zappos são exemplos clássicos de sucesso que iniciaram suas trajetórias com um MVP para validar suas propostas de valor antes de investir em um desenvolvimento em larga escala \cite{ExemplosMVP}.
+
+\section{Arquitetura e Tecnologias Adotadas}
+
+\subsection{Arquitetura Frontend com Next.js}
+\par Para a construção da interface do usuário (\textit{frontend}), optou-se pelo framework Next.js. Em comparação com outras bibliotecas e frameworks populares como Vue.js ou Angular, o Next.js se destaca por sua arquitetura híbrida que otimiza a performance e a experiência do desenvolvedor \cite{NextJsvsAngularVue_Brilworks}. Seus recursos de Renderização no Lado do Servidor (SSR - \textit{Server-Side Rendering}) e Geração de Site Estático (SSG - \textit{Static Site Generation}) são cruciais para a performance da aplicação, resultando em tempos de carregamento mais rápidos e melhor indexação por mecanismos de busca (SEO) \cite{SSReSSG}.
+
+\subsection{Arquitetura Backend com NestJS}
+\par No desenvolvimento do \textit{backend}, a escolha foi o NestJS, um framework Node.js progressivo. Diferente de alternativas mais flexíveis e menos estruturadas como o Express.js, o NestJS adota uma arquitetura opinativa e modular, fortemente inspirada no Angular. Essa estrutura organizada facilita a escalabilidade, a manutenção e a testabilidade do código, tornando-o ideal para aplicações corporativas robustas e complexas. A modularidade do NestJS permite que a aplicação seja dividida em componentes independentes e reutilizáveis, promovendo um código mais limpo e organizado \cite{NestJSModular}.
+
+\subsection{Sistema de Gerenciamento de Banco de Dados: PostgreSQL}
+\par A persistência dos dados é gerenciada pelo PostgreSQL, um sistema de gerenciamento de banco de dados relacional (SGBDR) de código aberto. Para uma aplicação de controle de ponto, onde a integridade e a consistência dos dados são críticas (registros de ponto, informações de funcionários, etc.), um banco de dados SQL como o PostgreSQL é superior a alternativas NoSQL como o MongoDB \cite{PostgreSQLvsMongoDB_AWS}. O PostgreSQL garante a conformidade com os princípios ACID (Atomicidade, Consistência, Isolamento e Durabilidade) e oferece tipos de dados avançados, que são fundamentais para manter a confiabilidade e a precisão das informações trabalhistas \cite{PostgreSQLACID}.
+
+\subsection{Segurança e Autenticação}
+
+\subsubsection{Autenticação com JSON Web Tokens (JWT)}
+\par A autenticação do sistema é baseada em JSON Web Tokens (JWT), um padrão aberto (RFC 7519) para a criação de tokens de acesso que afirmam um determinado número de "claims" (informações). Em uma arquitetura de microsserviços ou em aplicações de página única (SPA), o JWT é vantajoso por ser \textit{stateless}: o servidor não precisa armazenar o estado da sessão do usuário. Após o login, o cliente recebe um token assinado que é enviado a cada requisição subsequente para validar a identidade e as permissões do usuário \cite{JWTvsCookies}. Para mitigar riscos, é crucial validar o algoritmo do token (`alg`) no servidor e usar chaves de assinatura fortes, evitando vulnerabilidades conhecidas \cite{JWTVulnerabilities}.
+
+\subsubsection{Controle de Acesso Baseado em Papéis (RBAC)}
+\par Para gerenciar as permissões de acesso dentro do sistema, foi implementado o modelo de Controle de Acesso Baseado em Papéis (RBAC - \textit{Role-Based Access Control}). O RBAC simplifica a administração de permissões ao associá-las a "papéis" (como "Funcionário" e "Gerente") em vez de a usuários individuais. Um usuário recebe acesso a um conjunto de funcionalidades com base nos papéis que lhe são atribuídos. Esse modelo centraliza a gestão de acesso, reduz a complexidade administrativa e fortalece a segurança ao garantir que os usuários possam acessar apenas as informações e funcionalidades estritamente necessárias para o desempenho de suas funções \cite{RBAC_IBM}.
+
+\section{Tendências e Futuro da Gestão de Ponto}
+\par O campo da gestão de Recursos Humanos está em constante transformação, impulsionado por tecnologias emergentes. Sistemas de ponto, como o desenvolvido neste projeto, estão na vanguarda dessa evolução. Tendências futuras apontam para uma integração ainda maior com tecnologias como Inteligência Artificial (IA) para análise preditiva de absenteísmo e biometria avançada, como o reconhecimento facial, para aumentar ainda mais a segurança e agilizar o processo de marcação de ponto \cite{ReconhecimentoFacialPonto, TendenciasRH2025}. A contínua evolução dessas ferramentas promete revolucionar a forma como as empresas gerenciam sua força de trabalho, tornando os processos cada vez mais inteligentes, eficientes e seguros.

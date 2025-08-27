@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.22)  27 AUG 2025 03:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.22)  27 AUG 2025 20:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1792,11 +1792,13 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
 [6
 
 
-]) (./pre-textual/simbolos.tex) (build/documento.toc)
+]) (./pre-textual/simbolos.tex) (build/documento.toc
 
 [7
 
-]) (./estrutura/textual.tex (./capitulos/introducao.tex
+])
+
+[8]) (./estrutura/textual.tex (./capitulos/introducao.tex
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 6.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
@@ -1807,7 +1809,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 
-[8
+[9
 
 
 ]
@@ -1821,27 +1823,43 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 
-[9]
+[10]
 
-[10]) (./capitulos/tecnologias.tex
+[11]) (./capitulos/fundamentacao-teorica.tex
 
-[11]
+[12]
 
-[12
+[13
+
+]
+
+[14]
+
+[15]) (./capitulos/requisitos.tex) (./capitulos/tecnologias.tex
+
+[16]
+
+[17]
+
+[18
 
 ]) (./capitulos/modelagem-projeto.tex) (./capitulos/software.tex) (./capitulos/consideracoes.tex))
 
-[13]
+[19]
 \openout2 = `estrutura/pos-textual.aux'.
 
  (./estrutura/pos-textual.tex (./pos-textual/referencias.tex)
 
-[14
+[20
 
 
-] (./pos-textual/glossario.tex) (./pos-textual/apendices.tex) (./pos-textual/anexos.tex) (./pos-textual/indices.tex))
+]
 
-[15]
+[21]
+
+[22] (./pos-textual/glossario.tex) (./pos-textual/apendices.tex) (./pos-textual/anexos.tex) (./pos-textual/indices.tex))
+
+[23]
 \tf@lot=\write6
 \openout6 = `documento.lot'.
 
@@ -1860,18 +1878,18 @@ Package logreq Info: Writing requests to 'documento.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 50200 strings out of 473190
- 1018443 string characters out of 5715800
- 2104972 words of memory out of 5000000
- 72317 multiletter control sequences out of 15000+600000
- 592496 words of font info for 196 fonts, out of 8000000 for 9000
+ 50445 strings out of 473190
+ 1024271 string characters out of 5715800
+ 2124673 words of memory out of 5000000
+ 72470 multiletter control sequences out of 15000+600000
+ 594765 words of font info for 223 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  119i,12n,134p,1271b,4447s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on build/documento.pdf (16 pages, 102560 bytes).
+Output written on build/documento.pdf (24 pages, 130158 bytes).
 PDF statistics:
- 357 PDF objects out of 1000 (max. 8388607)
- 309 compressed objects within 4 object streams
- 69 named destinations out of 1000 (max. 500000)
- 44354 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 610 PDF objects out of 1000 (max. 8388607)
+ 552 compressed objects within 6 object streams
+ 115 named destinations out of 1000 (max. 500000)
+ 44506 words of extra memory for PDF output out of 51595 (max. 10000000)
 
