@@ -50,9 +50,30 @@
 \contentsline {subsection}{\numberline {4.2.2}Prisma}{22}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.3}PostgreSQL}{22}{subsection.4.2.3}%
 \contentsline {section}{\numberline {4.3}Resumo das Tecnologias e Versões}{22}{section.4.3}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase []{Arquitetura e Modelagem do Sistema}}{24}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Visão Geral da Arquitetura}{24}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Modelagem de Dados}{25}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Entidades Principais}{25}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Relacionamentos e Cardinalidades}{26}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Arquitetura do Back-End}{27}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Estrutura Modular}{27}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Camadas Arquiteturais}{27}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Principais Funcionalidades}{28}{subsection.5.3.3}%
+\contentsline {section}{\numberline {5.4}Arquitetura do Front-End}{28}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Estrutura de Componentes}{28}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Padrões Arquiteturais Implementados}{29}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Gerenciamento de Estado}{29}{subsection.5.4.3}%
+\contentsline {section}{\numberline {5.5}Fluxo de Autenticação e Autorização}{30}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Componentes de Segurança}{30}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Validação de Geolocalização}{31}{subsection.5.5.2}%
+\contentsline {section}{\numberline {5.6}Integração com Serviços Externos}{32}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Google Maps API}{32}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Geolocation API}{32}{subsection.5.6.2}%
+\contentsline {section}{\numberline {5.7}Considerações de Performance e Escalabilidade}{32}{section.5.7}%
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{Refer\^encias}{24}{section*.16}%
+\contentsline {chapter}{Refer\^encias}{34}{section*.22}%
 \babel@toc {brazil}{}\relax 
 \babel@toc {brazil}{}\relax 
 \babel@toc {brazil}{}\relax 

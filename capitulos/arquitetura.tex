@@ -1,0 +1,496 @@
+\chapter{Arquitetura e Modelagem do Sistema}
+
+Este capítulo apresenta a arquitetura e modelagem do sistema de registro de ponto eletrônico desenvolvido, detalhando a estrutura organizacional do \textit{software}, as tecnologias empregadas, os padrões arquiteturais adotados e o modelo de dados implementado. O sistema foi concebido seguindo uma arquitetura distribuída, com separação clara entre \textit{frontend} e \textit{backend}, permitindo escalabilidade, manutenibilidade e flexibilidade na evolução da aplicação.
+
+\section{Visão Geral da Arquitetura}
+
+O sistema de registro de ponto eletrônico foi desenvolvido utilizando uma arquitetura em três camadas (3-tier), separando claramente as responsabilidades entre apresentação, lógica de negócio e persistência de dados. Esta abordagem segue os princípios da arquitetura SOA (\textit{Service-Oriented Architecture}) e REST (\textit{Representational State Transfer}), promovendo a interoperabilidade e facilitando a integração com sistemas externos.
+
+A Figura~\ref{fig:arquitetura-geral} apresenta a visão geral da arquitetura do sistema, destacando os principais componentes e suas interações.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    node distance=1.5cm,
+    box/.style={rectangle, draw, fill=blue!10, text width=3cm, text centered, minimum height=1.2cm},
+    api/.style={rectangle, draw, fill=green!10, text width=2.5cm, text centered, minimum height=1cm},
+    db/.style={cylinder, draw, fill=yellow!10, text width=2cm, text centered, minimum height=1.5cm, aspect=0.25},
+    external/.style={rectangle, draw, fill=red!10, text width=2.5cm, text centered, minimum height=1cm},
+    arrow/.style={->, thick}
+]
+
+% Frontend Layer
+\node[box] (client) at (0,6) {Cliente Web\\(Next.js 15)};
+\node[box] (auth) at (0,4) {Autenticação\\(NextAuth.js)};
+
+% API Gateway
+\node[api] (gateway) at (5,5) {API Gateway\\(NestJS)};
+
+% Backend Services
+\node[api] (auth-service) at (3,2.5) {Auth Service};
+\node[api] (user-service) at (7,2.5) {User Service};
+\node[api] (company-service) at (3,0.5) {Company Service};
+\node[api] (point-service) at (7,0.5) {Point Service};
+
+% Database
+\node[db] (database) at (11,3) {PostgreSQL\\Database};
+
+% External Services
+\node[external] (maps) at (2,8) {Google Maps\\API};
+\node[external] (geolocation) at (8,8) {Geolocation\\Services};
+
+% Connections
+\draw[arrow] (client) -- (gateway) node[midway, above] {HTTPS/REST};
+\draw[arrow] (auth) -- (gateway);
+\draw[arrow] (gateway) -- (auth-service);
+\draw[arrow] (gateway) -- (user-service);
+\draw[arrow] (gateway) -- (company-service);
+\draw[arrow] (gateway) -- (point-service);
+\draw[arrow] (auth-service) -- (database);
+\draw[arrow] (user-service) -- (database);
+\draw[arrow] (company-service) -- (database);
+\draw[arrow] (point-service) -- (database);
+\draw[arrow] (client) -- (maps);
+\draw[arrow] (client) -- (geolocation);
+
+\end{tikzpicture}
+\caption{Arquitetura geral do sistema de registro de ponto}
+\label{fig:arquitetura-geral}
+\end{figure}
+
+A arquitetura adotada proporciona as seguintes vantagens:
+
+\begin{itemize}
+    \item \textbf{Separação de Responsabilidades}: Cada camada possui responsabilidades bem definidas, facilitando a manutenção e evolução do sistema;
+    \item \textbf{Escalabilidade}: A arquitetura permite escalar horizontalmente cada componente de forma independente;
+    \item \textbf{Testabilidade}: A separação em camadas facilita a implementação de testes unitários e de integração;
+    \item \textbf{Reutilização}: Os serviços do \textit{backend} podem ser consumidos por diferentes clientes;
+    \item \textbf{Segurança}: A centralização da lógica de autenticação e autorização no \textit{backend} garante maior segurança.
+\end{itemize}
+
+\section{Modelagem de Dados}
+
+O modelo de dados foi projetado seguindo os princípios da normalização de banco de dados e os padrões do Domain-Driven Design (DDD). O sistema utiliza PostgreSQL como sistema de gerenciamento de banco de dados, aproveitando suas características de robustez, conformidade com ACID e suporte a tipos de dados complexos.
+
+A Figura~\ref{fig:modelo-entidades} apresenta o diagrama entidade-relacionamento (DER) do sistema, destacando as principais entidades e seus relacionamentos.
+
+\begin{figure}[htbp]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+    entity/.style={rectangle, draw, fill=blue!10, text width=3cm, text centered, minimum height=1.5cm},
+    attribute/.style={ellipse, draw, fill=yellow!10, text width=2cm, text centered, minimum height=0.8cm},
+    relationship/.style={diamond, draw, fill=green!10, text width=2cm, text centered, minimum height=1cm},
+    isa/.style={triangle, draw, fill=red!10, text width=1.5cm, text centered, minimum height=1cm}
+]
+
+% Entidades principais
+\node[entity] (empresa) at (0,6) {\textbf{Empresa}\\id, nome, cnpj\\email, latitude\\longitude, raio};
+\node[entity] (usuario) at (6,6) {\textbf{Usuario}\\id, nome, email\\password, papel\\status, cpf};
+\node[entity] (departamento) at (0,3) {\textbf{Departamento}\\id, nome\\descricao};
+\node[entity] (cargo) at (0,0) {\textbf{Cargo}\\id, nome\\descricao\\base\_salarial};
+\node[entity] (info-trab) at (6,3) {\textbf{InformacoesTrabalhistas}\\id, data\_admissao\\carga\_horaria\\salario};
+\node[entity] (horario-func) at (12,6) {\textbf{HorarioFuncionario}\\id, dia\_semana\\horario\_inicio\\horario\_fim};
+\node[entity] (registro-ponto) at (6,0) {\textbf{RegistroPonto}\\id, tipo, status\\data\_hora, latitude\\longitude};
+\node[entity] (justificativa) at (12,0) {\textbf{Justificativa}\\id, motivo, tipo\\status, data\_aprovacao};
+
+% Relacionamentos
+\draw[thick] (empresa) -- (usuario) node[midway, above] {1:N};
+\draw[thick] (empresa) -- (departamento) node[midway, left] {1:N};
+\draw[thick] (departamento) -- (cargo) node[midway, left] {1:N};
+\draw[thick] (usuario) -- (info-trab) node[midway, right] {1:1};
+\draw[thick] (info-trab) -- (cargo) node[midway, below] {N:1};
+\draw[thick] (info-trab) -- (departamento) node[midway, above] {N:1};
+\draw[thick] (usuario) -- (horario-func) node[midway, above] {1:N};
+\draw[thick] (usuario) -- (registro-ponto) node[midway, left] {1:N};
+\draw[thick] (registro-ponto) -- (justificativa) node[midway, above] {1:N};
+
+\end{tikzpicture}
+}
+\caption{Modelo entidade-relacionamento do sistema}
+\label{fig:modelo-entidades}
+\end{figure}
+
+\subsection{Entidades Principais}
+
+O modelo de dados é composto pelas seguintes entidades principais:
+
+\begin{description}
+    \item[Empresa] Representa a organização que utiliza o sistema. Armazena informações corporativas, configurações de geolocalização (latitude, longitude, raio permitido) e políticas de tolerância para registros de ponto.
+    
+    \item[Usuario] Modela os usuários do sistema (proprietários, administradores e funcionários). Implementa controle de acesso baseado em papéis (RBAC - \textit{Role-Based Access Control}) através do campo \texttt{papel}.
+    
+    \item[Departamento] Representa as divisões organizacionais da empresa, permitindo estruturação hierárquica e controle administrativo.
+    
+    \item[Cargo] Define as posições/funções dentro da organização, incluindo informações salariais base para cálculos de folha de pagamento.
+    
+    \item[InformacoesTrabalhistas] Consolida dados contratuais do funcionário, incluindo data de admissão, carga horária semanal e salário.
+    
+    \item[HorarioFuncionario] Modela os horários de trabalho individuais, permitindo flexibilidade na definição de expedientes por dia da semana.
+    
+    \item[RegistroPonto] Armazena os registros de ponto dos funcionários, incluindo validação geográfica e controle de status (aprovado, pendente, justificado).
+    
+    \item[Justificativa] Implementa o sistema de justificativas para registros irregulares, com workflow de aprovação.
+\end{description}
+
+\subsection{Relacionamentos e Cardinalidades}
+
+Os relacionamentos entre as entidades seguem as regras de negócio do domínio:
+
+\begin{itemize}
+    \item Uma empresa pode ter múltiplos usuários, departamentos e configurações de horário (1:N);
+    \item Cada usuário pertence a uma única empresa, mas pode ter múltiplos registros de ponto e horários (1:N);
+    \item As informações trabalhistas mantêm relacionamento 1:1 com o usuário, garantindo integridade referencial;
+    \item Registros de ponto podem ter múltiplas justificativas, permitindo rejeição e reenvio (1:N).
+\end{itemize}
+
+\section{Arquitetura do Back-End}
+
+O \textit{backend} foi desenvolvido utilizando o \textit{framework} NestJS, que implementa os padrões arquiteturais do Angular para o ambiente Node.js. A escolha do NestJS se justifica pela robustez na implementação de APIs RESTful, suporte nativo a TypeScript, sistema de injeção de dependências e extensa capacidade de integração com bibliotecas do ecossistema Node.js.
+
+\subsection{Estrutura Modular}
+
+A arquitetura do \textit{backend} segue o padrão modular do NestJS, organizando funcionalidades em módulos coesos e fracamente acoplados. A Figura~\ref{fig:arquitetura-backend} ilustra a estrutura modular implementada.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    module/.style={rectangle, draw, fill=blue!15, text width=2.5cm, text centered, minimum height=1.2cm, rounded corners=3pt},
+    service/.style={rectangle, draw, fill=green!15, text width=2cm, text centered, minimum height=0.8cm, rounded corners=2pt},
+    controller/.style={rectangle, draw, fill=yellow!15, text width=2cm, text centered, minimum height=0.8cm, rounded corners=2pt},
+    entity/.style={rectangle, draw, fill=red!15, text width=2cm, text centered, minimum height=0.8cm, rounded corners=2pt},
+    guard/.style={rectangle, draw, fill=purple!15, text width=2cm, text centered, minimum height=0.8cm, rounded corners=2pt}
+]
+
+% Core Module
+\node[module] (app) at (0,8) {\textbf{AppModule}\\Main Application};
+\node[module] (database) at (4,8) {\textbf{DatabaseModule}\\TypeORM Config};
+
+% Auth Module
+\node[module] (auth-mod) at (0,6) {\textbf{AuthModule}};
+\node[controller] (auth-ctrl) at (-2,5) {Auth\\Controller};
+\node[service] (auth-svc) at (0,5) {Auth\\Service};
+\node[guard] (jwt-guard) at (2,5) {JWT\\Guard};
+
+% Users Module
+\node[module] (users-mod) at (4,6) {\textbf{UsuariosModule}};
+\node[controller] (users-ctrl) at (3,5) {Usuarios\\Controller};
+\node[service] (users-svc) at (4,5) {Usuarios\\Service};
+\node[entity] (user-entity) at (5,5) {Usuario\\Entity};
+
+% Companies Module
+\node[module] (companies-mod) at (8,6) {\textbf{EmpresasModule}};
+\node[controller] (companies-ctrl) at (7,5) {Empresas\\Controller};
+\node[service] (companies-svc) at (8,5) {Empresas\\Service};
+\node[entity] (company-entity) at (9,5) {Empresa\\Entity};
+
+% Point Module
+\node[module] (point-mod) at (0,3) {\textbf{PontoModule}};
+\node[controller] (point-ctrl) at (-1,2) {Ponto\\Controller};
+\node[service] (point-svc) at (0,2) {Ponto\\Service};
+\node[entity] (point-entity) at (1,2) {RegistroPonto\\Entity};
+\node[controller] (just-ctrl) at (-1,1) {Justificativas\\Controller};
+\node[service] (just-svc) at (0,1) {Justificativas\\Service};
+
+% Database layer
+\node[entity] (postgres) at (4,0) {\textbf{PostgreSQL}\\Database};
+
+% Connections
+\draw[->] (app) -- (auth-mod);
+\draw[->] (app) -- (users-mod);
+\draw[->] (app) -- (companies-mod);
+\draw[->] (app) -- (point-mod);
+\draw[->] (app) -- (database);
+
+\draw[->] (auth-mod) -- (auth-ctrl);
+\draw[->] (auth-mod) -- (auth-svc);
+\draw[->] (auth-mod) -- (jwt-guard);
+
+\draw[->] (users-mod) -- (users-ctrl);
+\draw[->] (users-mod) -- (users-svc);
+\draw[->] (users-mod) -- (user-entity);
+
+\draw[->] (companies-mod) -- (companies-ctrl);
+\draw[->] (companies-mod) -- (companies-svc);
+\draw[->] (companies-mod) -- (company-entity);
+
+\draw[->] (point-mod) -- (point-ctrl);
+\draw[->] (point-mod) -- (point-svc);
+\draw[->] (point-mod) -- (point-entity);
+\draw[->] (point-mod) -- (just-ctrl);
+\draw[->] (point-mod) -- (just-svc);
+
+\draw[->] (user-entity) -- (postgres);
+\draw[->] (company-entity) -- (postgres);
+\draw[->] (point-entity) -- (postgres);
+
+\end{tikzpicture}
+\caption{Arquitetura modular do backend NestJS}
+\label{fig:arquitetura-backend}
+\end{figure}
+
+\subsection{Camadas Arquiteturais}
+
+O \textit{backend} implementa uma arquitetura em camadas bem definidas:
+
+\begin{description}
+    \item[Camada de Apresentação (Controllers)] Responsável por receber e processar requisições HTTP, validar parâmetros de entrada e retornar respostas adequadas. Utiliza decoradores do NestJS para mapeamento de rotas e validação automática através das bibliotecas \texttt{class-validator} e \texttt{class-transformer}.
+    
+    \item[Camada de Negócio (Services)] Concentra a lógica de negócio da aplicação, implementando regras específicas do domínio como validação de geolocalização, cálculo de banco de horas e workflows de aprovação de justificativas.
+    
+    \item[Camada de Acesso a Dados (Repositories)] Implementada através do TypeORM, fornece abstração para operações de persistência, mapeamento objeto-relacional e gerenciamento de transações.
+    
+    \item[Camada de Segurança (Guards e Middlewares)] Implementa autenticação JWT, autorização baseada em papéis e validações de segurança transversais.
+\end{description}
+
+\subsection{Principais Funcionalidades}
+
+O \textit{backend} implementa as seguintes funcionalidades principais:
+
+\begin{itemize}
+    \item \textbf{Autenticação e Autorização}: Sistema completo baseado em JWT com refresh tokens e controle de sessão;
+    \item \textbf{Gestão de Usuários}: CRUD completo com validação de dados e controle de status;
+    \item \textbf{Controle de Ponto}: Registro com validação geográfica, sequenciamento obrigatório e cálculo automático de horas;
+    \item \textbf{Sistema de Justificativas}: Workflow completo com aprovação/rejeição e rastreabilidade;
+    \item \textbf{Relatórios}: Cálculo de banco de horas, extração de dados e relatórios gerenciais.
+\end{itemize}
+
+\section{Arquitetura do Front-End}
+
+O \textit{frontend} foi desenvolvido utilizando Next.js 15 com React 19, aproveitando as funcionalidades avançadas de Server-Side Rendering (SSR), Static Site Generation (SSG) e o novo App Router. Esta escolha tecnológica proporciona excelente performance, SEO otimizado e experiência de usuário superior.
+
+\subsection{Estrutura de Componentes}
+
+A aplicação segue os padrões de design de componentes do React, implementando uma arquitetura baseada em componentes reutilizáveis e contextualizada. A Figura~\ref{fig:arquitetura-frontend} apresenta a estrutura organizacional do \textit{frontend}.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    page/.style={rectangle, draw, fill=blue!15, text width=2.5cm, text centered, minimum height=1cm, rounded corners=3pt},
+    component/.style={rectangle, draw, fill=green!15, text width=2cm, text centered, minimum height=0.8cm, rounded corners=2pt},
+    context/.style={rectangle, draw, fill=yellow!15, text width=2cm, text centered, minimum height=0.8cm, rounded corners=2pt},
+    service/.style={rectangle, draw, fill=red!15, text width=2cm, text centered, minimum height=0.8cm, rounded corners=2pt},
+    hook/.style={rectangle, draw, fill=purple!15, text width=2cm, text centered, minimum height=0.8cm, rounded corners=2pt}
+]
+
+% App Structure
+\node[page] (app) at (0,8) {\textbf{App Router}\\Next.js 15};
+\node[page] (layout) at (3,8) {\textbf{RootLayout}\\Global Layout};
+
+% Pages
+\node[page] (login) at (-3,6) {Login\\Page};
+\node[page] (dashboard) at (0,6) {Dashboard\\Pages};
+\node[page] (ponto) at (3,6) {Ponto\\Pages};
+
+% Contexts
+\node[context] (auth-ctx) at (-3,4) {Auth\\Context};
+\node[context] (maps-ctx) at (0,4) {GoogleMaps\\Context};
+
+% Components
+\node[component] (ui-comp) at (3,4) {UI\\Components};
+\node[component] (business-comp) at (6,4) {Business\\Components};
+
+% Services
+\node[service] (api-service) at (-3,2) {API\\Services};
+\node[service] (point-service) at (0,2) {Point\\Service};
+\node[service] (company-service) at (3,2) {Company\\Service};
+
+% Custom Hooks
+\node[hook] (auth-hook) at (-3,0) {useAuth};
+\node[hook] (geo-hook) at (0,0) {useGeolocation};
+\node[hook] (mobile-hook) at (3,0) {useMobile};
+
+% Connections
+\draw[->] (app) -- (layout);
+\draw[->] (layout) -- (login);
+\draw[->] (layout) -- (dashboard);
+\draw[->] (layout) -- (ponto);
+
+\draw[->] (login) -- (auth-ctx);
+\draw[->] (dashboard) -- (auth-ctx);
+\draw[->] (ponto) -- (auth-ctx);
+\draw[->] (ponto) -- (maps-ctx);
+
+\draw[->] (dashboard) -- (ui-comp);
+\draw[->] (dashboard) -- (business-comp);
+\draw[->] (ponto) -- (ui-comp);
+\draw[->] (ponto) -- (business-comp);
+
+\draw[->] (auth-ctx) -- (api-service);
+\draw[->] (business-comp) -- (point-service);
+\draw[->] (business-comp) -- (company-service);
+
+\draw[->] (auth-ctx) -- (auth-hook);
+\draw[->] (maps-ctx) -- (geo-hook);
+\draw[->] (ui-comp) -- (mobile-hook);
+
+\end{tikzpicture}
+\caption{Arquitetura de componentes do frontend Next.js}
+\label{fig:arquitetura-frontend}
+\end{figure}
+
+\subsection{Padrões Arquiteturais Implementados}
+
+O \textit{frontend} implementa diversos padrões arquiteturais modernos:
+
+\begin{description}
+    \item[Component-Based Architecture] Toda a interface é construída através de componentes React reutilizáveis, seguindo os princípios de Single Responsibility e composição.
+    
+    \item[Context API] Implementação de contextos globais para autenticação, configurações de mapas e estado da aplicação, evitando prop drilling e centralizando estados compartilhados.
+    
+    \item[Custom Hooks] Encapsulamento de lógicas complexas em hooks customizados, promovendo reutilização e separação de responsabilidades.
+    
+    \item[Service Layer] Abstração das chamadas de API através de serviços especializados, facilitando manutenção e testes.
+    
+    \item[Design System] Implementação de um sistema de design consistente utilizando Radix UI e Tailwind CSS, garantindo acessibilidade e responsividade.
+\end{description}
+
+\subsection{Gerenciamento de Estado}
+
+O gerenciamento de estado da aplicação utiliza uma abordagem híbrida:
+
+\begin{itemize}
+    \item \textbf{Estado Local}: Componentes individuais gerenciam seus estados internos através do hook \texttt{useState};
+    \item \textbf{Estado Global}: Contextos React para dados compartilhados (autenticação, configurações);
+    \item \textbf{Estado do Servidor}: React Query (TanStack Query) para cache e sincronização de dados remotos;
+    \item \textbf{Estado de Formulários}: React Hook Form para validação e gerenciamento eficiente de formulários.
+\end{itemize}
+
+\section{Fluxo de Autenticação e Autorização}
+
+O sistema implementa um fluxo de autenticação robusto baseado em JWT (\textit{JSON Web Tokens}) com integração entre \textit{frontend} e \textit{backend}. A Figura~\ref{fig:fluxo-auth} ilustra o processo completo de autenticação.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    actor/.style={rectangle, draw, fill=blue!15, text width=2cm, text centered, minimum height=1cm},
+    system/.style={rectangle, draw, fill=green!15, text width=2.5cm, text centered, minimum height=1cm},
+    db/.style={cylinder, draw, fill=yellow!15, text width=2cm, text centered, minimum height=1.2cm, aspect=0.25},
+    arrow/.style={->, thick}
+]
+
+% Actors and Systems
+\node[actor] (user) at (0,10) {Usuário};
+\node[system] (frontend) at (4,10) {Frontend\\(NextAuth)};
+\node[system] (backend) at (8,10) {Backend\\(NestJS)};
+\node[db] (database) at (12,10) {PostgreSQL};
+
+% Authentication Flow
+\node[rectangle, fill=gray!10, text width=13cm, minimum height=8cm] at (6,6) {};
+\node at (6,9.5) {\textbf{Fluxo de Autenticação}};
+
+% Step by step
+\draw[arrow] (user) -- (frontend) node[midway, above] {1. Login};
+\draw[arrow] (frontend) -- (backend) node[midway, above] {2. POST /auth/login};
+\draw[arrow] (backend) -- (database) node[midway, above] {3. Validar credenciais};
+\draw[arrow] (database) -- (backend) node[midway, below] {4. Dados do usuário};
+\draw[arrow] (backend) -- (frontend) node[midway, below] {5. JWT Token + User};
+\draw[arrow] (frontend) -- (user) node[midway, below] {6. Redirecionamento};
+
+% Additional flows
+\node at (2,7) {\small 7. Middleware valida token};
+\node at (6,6.5) {\small 8. Guards verificam permissões};
+\node at (10,6) {\small 9. Refresh token automático};
+
+\end{tikzpicture}
+\caption{Fluxo de autenticação e autorização}
+\label{fig:fluxo-auth}
+\end{figure}
+
+\subsection{Componentes de Segurança}
+
+O sistema de segurança é composto pelos seguintes elementos:
+
+\begin{description}
+    \item[JWT Strategy] Implementação da estratégia Passport.js para validação de tokens JWT no \textit{backend};
+    \item[NextAuth.js] Biblioteca de autenticação para Next.js que gerencia sessões, tokens e callbacks;
+    \item[Guards] Implementação de guards NestJS para proteção de rotas e validação de permissões;
+    \item[Middleware] Middleware Next.js para proteção de rotas do \textit{frontend} baseado em papéis;
+    \item[RBAC] Sistema de controle de acesso baseado em papéis com três níveis: funcionário, administrador e proprietário.
+\end{description}
+
+\subsection{Validação de Geolocalização}
+
+Um dos diferenciais do sistema é a validação automática de geolocalização para registros de ponto. O processo utiliza a API de Geolocalização do navegador integrada com o Google Maps API para validação de presença física no local de trabalho.
+
+A Figura~\ref{fig:validacao-geo} apresenta o algoritmo de validação geográfica implementado.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    start/.style={ellipse, draw, fill=green!20, text width=2cm, text centered},
+    process/.style={rectangle, draw, fill=blue!15, text width=3cm, text centered, minimum height=1cm},
+    decision/.style={diamond, draw, fill=yellow!15, text width=2.5cm, text centered, minimum height=1cm},
+    end/.style={ellipse, draw, fill=red!20, text width=2cm, text centered}
+]
+
+\node[start] (inicio) at (0,10) {Registro de Ponto};
+\node[process] (geolocalizacao) at (0,8.5) {Obter Localização\\do Dispositivo};
+\node[process] (empresa-loc) at (0,7) {Buscar Localização\\da Empresa};
+\node[process] (calculo) at (0,5.5) {Calcular Distância\\(Haversine)};
+\node[decision] (dentro-raio) at (0,4) {Dentro do\\Raio?};
+\node[process] (aprovado) at (-3,2.5) {Status:\\APROVADO};
+\node[decision] (exige-just) at (3,2.5) {Empresa Exige\\Justificativa?};
+\node[process] (pendente) at (3,1) {Status:\\PENDENTE};
+\node[process] (aprovado-fora) at (6,1) {Status:\\APROVADO};
+\node[end] (fim) at (0,0) {Registro\\Salvo};
+
+% Connections
+\draw[->] (inicio) -- (geolocalizacao);
+\draw[->] (geolocalizacao) -- (empresa-loc);
+\draw[->] (empresa-loc) -- (calculo);
+\draw[->] (calculo) -- (dentro-raio);
+\draw[->] (dentro-raio) -- (aprovado) node[midway, left] {Sim};
+\draw[->] (dentro-raio) -- (exige-just) node[midway, right] {Não};
+\draw[->] (exige-just) -- (pendente) node[midway, left] {Sim};
+\draw[->] (exige-just) -- (aprovado-fora) node[midway, above] {Não};
+\draw[->] (aprovado) -- (fim);
+\draw[->] (pendente) -- (fim);
+\draw[->] (aprovado-fora) -- (fim);
+
+\end{tikzpicture}
+\caption{Algoritmo de validação geográfica}
+\label{fig:validacao-geo}
+\end{figure}
+
+O algoritmo implementa a fórmula de Haversine para cálculo preciso de distância entre coordenadas geográficas, considerando a curvatura da Terra. A validação permite configuração flexível de raio de tolerância por empresa e políticas diferenciadas para registros fora da área permitida.
+
+\section{Integração com Serviços Externos}
+
+O sistema integra-se com serviços externos para expandir suas funcionalidades:
+
+\subsection{Google Maps API}
+
+A integração com o Google Maps API proporciona:
+
+\begin{itemize}
+    \item Seleção visual de localização da empresa através de interface interativa;
+    \item Geocodificação reversa para conversão de coordenadas em endereços;
+    \item Validação de endereços e otimização de coordenadas;
+    \item Visualização de mapas para administradores supervisionarem registros.
+\end{itemize}
+
+\subsection{Geolocation API}
+
+A API nativa de geolocalização do navegador fornece:
+
+\begin{itemize}
+    \item Coordenadas precisas do dispositivo do funcionário;
+    \item Detecção automática de localização sem intervenção manual;
+    \item Tratamento de erros e permissões negadas;
+    \item Otimização de precisão baseada em contexto.
+\end{itemize}
+
+\section{Considerações de Performance e Escalabilidade}
+
+A arquitetura implementada considera aspectos fundamentais de performance e escalabilidade:
+
+\begin{description}
+    \item[Cache Inteligente] Implementação de cache em múltiplas camadas: browser cache, Redis para sessões e cache de consultas no TypeORM;
+    \item[Lazy Loading] Carregamento sob demanda de componentes React e módulos Next.js;
+    \item[Database Optimization] Índices otimizados, consultas eficientes e relacionamentos bem estruturados;
+    \item[API Pagination] Implementação de paginação em todas as consultas que retornam listas;
+    \item[Horizontal Scaling] Arquitetura preparada para escalamento horizontal através de load balancers e múltiplas instâncias.
+\end{description}
+
+A arquitetura apresentada demonstra uma implementação robusta e moderna, seguindo as melhores práticas da engenharia de \textit{software} e proporcionando uma base sólida para evolução e manutenção do sistema de registro de ponto eletrônico.

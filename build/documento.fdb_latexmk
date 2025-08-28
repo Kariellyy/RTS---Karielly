@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber build/documento"] 1756334791.13464 "build/documento.bcf" "build/documento.bbl" "build/documento" 1756344113.23993 0
+["biber build/documento"] 1756334791.13464 "build/documento.bcf" "build/documento.bbl" "build/documento" 1756347729.08414 0
   "bibliografia.bib" 1756333040.15226 9498 bdc6d2896dff4fde472b255b0c6282cc ""
-  "build/documento.bcf" 1756344113.12501 116922 16c26fd92d9ee5758d5e2fd3bee163a1 "pdflatex"
+  "build/documento.bcf" 1756347728.96569 116922 16c26fd92d9ee5758d5e2fd3bee163a1 "pdflatex"
   (generated)
   "build/documento.bbl"
   "build/documento.blg"
   (rewritten before read)
-["pdflatex"] 1756344110.23386 "/Users/kariellycarvalho/Documents/Registro de Ponto/RTS - Karielly/documento.tex" "build/documento.pdf" "documento" 1756344113.2402 0
+["pdflatex"] 1756347725.61502 "/Users/kariellycarvalho/Documents/Registro de Ponto/RTS - Karielly/documento.tex" "build/documento.pdf" "documento" 1756347729.08445 0
   "/Users/kariellycarvalho/Documents/Registro de Ponto/RTS - Karielly/documento.tex" 1755897379.24822 667 d28e26cf7c9cec4963280b76ba8813f7 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -288,19 +288,19 @@
   "abntex-ifpi/Logo_ifpi.png" 1755905510 23290 f6f08ad8d9a60eae2bb970465bdc3068 ""
   "abntex-ifpi/abntex-ifpi.sty" 1755905510 10236 0efc2d99c590480d71bc2be4fad682ea ""
   "abntex-ifpi/tikz-uml.sty" 1755905510 302703 ed2f9b5dd419a64f254ecbf6a6653c7f ""
-  "build/documento.aux" 1756344113.0721 34076 c8f8966cd2903e063db10de0206a6e9f "pdflatex"
+  "build/documento.aux" 1756347728.90806 45751 5cd72e3f69fa5aaa4663d0095368c731 "pdflatex"
   "build/documento.bbl" 1756334792.44347 44686 078554ec03d71f49651206ced0caf3a8 "biber build/documento"
-  "build/documento.lot" 1756344113.12586 1618 dcfe3f6bbbe7b9b73c3dd5ac7f1b53ad "pdflatex"
-  "build/documento.run.xml" 1756344113.1258 2547 7b222dc79294bba1b221d06e66558f57 "pdflatex"
-  "build/documento.toc" 1756344113.12588 6132 8728797b3ec9e431f84c7247d30c2e3c "pdflatex"
-  "build/estrutura/pos-textual.aux" 1756344113.06952 9226 f0c2f307d0ad35cc0c53e6c1d68e9859 "pdflatex"
+  "build/documento.lot" 1756347728.96666 1618 dcfe3f6bbbe7b9b73c3dd5ac7f1b53ad "pdflatex"
+  "build/documento.run.xml" 1756347728.96656 2547 7b222dc79294bba1b221d06e66558f57 "pdflatex"
+  "build/documento.toc" 1756347728.9667 8120 6632ec172d858f82cd54bc73e2c3942d "pdflatex"
+  "build/estrutura/pos-textual.aux" 1756347728.9057 9226 3692b132cfc9756c83c17e13fc1a7f60 "pdflatex"
+  "capitulos/arquitetura.tex" 1756347725.35277 25577 9b782f794482efd53a98afe88a6ae329 ""
   "capitulos/consideracoes.tex" 1755905510 479 c3af707a97017d2abfe7741ae06ee27e ""
   "capitulos/fundamentacao-teorica.tex" 1756333149.49972 10400 6eb59429f552c1d80bad33e7df855f4f ""
   "capitulos/introducao.tex" 1756327307.39853 11034 277bbf590e0d507ea90d9eefd0b107a1 ""
-  "capitulos/modelagem-projeto.tex" 1755905510 4348 dc3fa360cb59f25edf62b425171a98ed ""
   "capitulos/requisitos.tex" 1756343393.44094 6687 47a5c83363829c36f27bddf013575dcd ""
   "capitulos/software.tex" 1755905510 756 ad5ad8cf6d197d40a7cba2af15c44b65 ""
-  "capitulos/tecnologias.tex" 1756344112.32951 5119 75c182375baf836be1a317daba984a56 ""
+  "capitulos/tecnologias.tex" 1756344255.58032 5119 75c182375baf836be1a317daba984a56 ""
   "configuracoes/citacoes.tex" 1756327006.29899 1547 1dad4248da77ed47de7d10a4f7aeb9b2 ""
   "configuracoes/cores.tex" 1755905510 440 9a2f769c3b95da4a04b4cd29a83d26ce ""
   "configuracoes/espacamentos.tex" 1755905510 204 5835d4f4e498271661fe6a684901f672 ""
@@ -310,8 +310,8 @@
   "documento.tex" 1755897379.24822 667 d28e26cf7c9cec4963280b76ba8813f7 ""
   "estrutura/pos-textual.tex" 1755905510 765 7292f7a2259f91799c533314beebba15 ""
   "estrutura/pre-textual.tex" 1755905510 1917 175c2215510941e8dc30376f19d9d3e7 ""
-  "estrutura/preambulo.tex" 1755897351.29229 2887 db47932669f632b2cb6a301f661eb1cc ""
-  "estrutura/textual.tex" 1756334784.11672 469 906dbc1af576c809f381c911d42808cd ""
+  "estrutura/preambulo.tex" 1756346719.46375 2887 db47932669f632b2cb6a301f661eb1cc ""
+  "estrutura/textual.tex" 1756345362.99697 463 8b32b7911552c678c3a7e5428e7d9170 ""
   "pos-textual/anexos.tex" 1755905510 249 ea6723aba37c9504fb8733df0cf83618 ""
   "pos-textual/apendices.tex" 1755905510 2426 2f6c06b427c7edba55153aad582065cc ""
   "pos-textual/glossario.tex" 1755905510 24 debd559c57b39b7c16c3ffcccba06760 ""
