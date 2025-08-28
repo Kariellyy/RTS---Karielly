@@ -1,0 +1,153 @@
+\chapter{REQUISITOS DO SISTEMA}
+
+Este capítulo apresenta a especificação dos requisitos funcionais e não funcionais do sistema de Registro de Ponto, obtidos através da análise das necessidades operacionais de empresas que necessitam controlar a jornada de trabalho de seus funcionários. Os requisitos foram organizados de forma a atender aos principais desafios de gestão de ponto eletrônico e controle de presença.
+
+\section{REQUISITOS FUNCIONAIS}
+
+Os requisitos funcionais descrevem as funcionalidades que o sistema de Registro de Ponto deve executar. A Tabela \ref{tab:requisitos-funcionais} apresenta os requisitos organizados por módulos funcionais.
+
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Requisitos funcionais do sistema de Registro de Ponto}
+\label{tab:requisitos-funcionais}
+\begin{tabular}{|p{0.08\textwidth}|p{0.22\textwidth}|p{0.6\textwidth}|}
+\hline
+\textbf{ID} & \textbf{Módulo} & \textbf{Descrição} \\
+\hline
+\multicolumn{3}{|c|}{\textbf{Autenticação e Autorização}} \\
+\hline
+RF01 & Registro & Cadastro de usuários com validação de dados pessoais e profissionais \\
+\hline
+RF02 & Login & Autenticação segura via e-mail e senha com controle de sessões \\
+\hline
+RF03 & Permissões & Controle de acesso com diferentes níveis de usuário (administrador, funcionário) \\
+\hline
+\multicolumn{3}{|c|}{\textbf{Gestão Multi-empresa}} \\
+\hline
+RF04 & Empresas & Criação e gestão de perfis de empresa com dados cadastrais completos \\
+\hline
+RF05 & Isolamento & Separação completa de dados entre diferentes empresas \\
+\hline
+\multicolumn{3}{|c|}{\textbf{Gestão de Funcionários}} \\
+\hline
+RF06 & Funcionários & Cadastro completo de funcionários com dados pessoais, profissionais e de contato \\
+\hline
+RF07 & Departamentos & Criação e gestão de departamentos organizacionais \\
+\hline
+RF08 & Cargos & Definição de cargos e responsabilidades dos funcionários \\
+\hline
+RF09 & Horários & Configuração de horários de trabalho personalizados por funcionário \\
+\hline
+\multicolumn{3}{|c|}{\textbf{Registro de Ponto}} \\
+\hline
+RF10 & Registro & Registro de entrada, saída, início e fim de intervalo com geolocalização \\
+\hline
+RF11 & Validação & Verificação automática de localização dentro do raio permitido \\
+\hline
+RF12 & Status & Controle de status dos registros (aprovado, pendente, rejeitado) \\
+\hline
+RF13 & Histórico & Consulta de histórico completo de registros de ponto \\
+\hline
+\multicolumn{3}{|c|}{\textbf{Justificativas}} \\
+\hline
+RF14 & Solicitação & Criação de justificativas para registros fora do raio ou problemas técnicos \\
+\hline
+RF15 & Aprovação & Sistema de aprovação e rejeição de justificativas pelos gestores \\
+\hline
+RF16 & Tipos & Categorização de justificativas (reunião externa, viagem a serviço, problemas técnicos) \\
+\hline
+\multicolumn{3}{|c|}{\textbf{Controle de Horas}} \\
+\hline
+RF17 & Banco de Horas & Cálculo automático do saldo de horas trabalhadas vs. previstas \\
+\hline
+RF18 & Extras & Controle de horas extras e débitos de jornada \\
+\hline
+RF19 & Relatórios & Geração de relatórios de horas por período \\
+\hline
+\multicolumn{3}{|c|}{\textbf{Dashboard e Métricas}} \\
+\hline
+RF20 & Dashboard & Visualização de métricas em tempo real (presentes, ausentes, horas extras) \\
+\hline
+RF21 & Gráficos & Apresentação gráfica de dados de presença e produtividade \\
+\hline
+RF22 & Alertas & Sistema de notificações para justificativas pendentes e relatórios disponíveis \\
+\hline
+\multicolumn{3}{|c|}{\textbf{Consultas e Filtros}} \\
+\hline
+RF23 & Busca & Pesquisa avançada de funcionários e registros com múltiplos filtros \\
+\hline
+RF24 & Filtros & Filtros por período, departamento, status e tipo de registro \\
+\hline
+RF25 & Exportação & Exportação de dados para relatórios e análises externas \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{REQUISITOS NÃO FUNCIONAIS}
+
+Os requisitos não funcionais definem os critérios de qualidade e restrições técnicas que o sistema deve atender. A Tabela \ref{tab:requisitos-nao-funcionais} apresenta esses requisitos organizados por categorias.
+
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Requisitos não funcionais do sistema de Registro de Ponto}
+\label{tab:requisitos-nao-funcionais}
+\begin{tabular}{|p{0.08\textwidth}|p{0.22\textwidth}|p{0.6\textwidth}|}
+\hline
+\textbf{ID} & \textbf{Categoria} & \textbf{Descrição} \\
+\hline
+\multicolumn{3}{|c|}{\textbf{Usabilidade}} \\
+\hline
+RNF01 & Responsividade & Interface adaptável a diferentes dispositivos móveis e desktops \\
+\hline
+RNF02 & Navegação & Interface intuitiva com navegação clara e feedback visual adequado \\
+\hline
+RNF03 & Acessibilidade & Formulários guiados com indicadores de progresso em processos complexos \\
+\hline
+\multicolumn{3}{|c|}{\textbf{Segurança}} \\
+\hline
+RNF04 & Autenticação & Sistema de login seguro com controle de sessões e tokens JWT \\
+\hline
+RNF05 & Autorização & Controle de acesso baseado em perfis de usuário e empresa \\
+\hline
+RNF06 & Isolamento & Separação total de dados entre diferentes empresas \\
+\hline
+RNF07 & Validação & Validação rigorosa de todas as entradas de dados e geolocalização \\
+\hline
+\multicolumn{3}{|c|}{\textbf{Performance}} \\
+\hline
+RNF08 & Carregamento & Tempo de resposta adequado para carregamento de páginas e registros \\
+\hline
+RNF09 & Consultas & Otimização de consultas ao banco de dados para relatórios e histórico \\
+\hline
+RNF10 & Escalabilidade & Suporte a crescimento do volume de dados e usuários simultâneos \\
+\hline
+\multicolumn{3}{|c|}{\textbf{Confiabilidade}} \\
+\hline
+RNF11 & Disponibilidade & Sistema disponível 24/7 para registro de ponto em qualquer horário \\
+\hline
+RNF12 & Backup & Backup automático dos dados de registro e configurações \\
+\hline
+RNF13 & Recuperação & Capacidade de recuperação de dados em caso de falhas \\
+\hline
+\multicolumn{3}{|c|}{\textbf{Manutenibilidade}} \\
+\hline
+RNF14 & Arquitetura & Código organizado em módulos bem definidos e reutilizáveis \\
+\hline
+RNF15 & Padrões & Seguimento de padrões de codificação estabelecidos \\
+\hline
+RNF16 & Documentação & API e código adequadamente documentados \\
+\hline
+\multicolumn{3}{|c|}{\textbf{Portabilidade}} \\
+\hline
+RNF17 & Containerização & Sistema deployável em containers para diferentes ambientes \\
+\hline
+RNF19 & Banco de Dados & Compatibilidade com diferentes sistemas de banco de dados \\
+\hline
+\multicolumn{3}{|c|}{\textbf{Integração}} \\
+\hline
+RNF20 & Geolocalização & Integração com serviços de geolocalização para validação de localização \\
+\hline
+\end{tabular}
+\end{table}

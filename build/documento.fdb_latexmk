@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber build/documento"] 1756334791.13464 "build/documento.bcf" "build/documento.bbl" "build/documento" 1756336240.66685 0
+["biber build/documento"] 1756334791.13464 "build/documento.bcf" "build/documento.bbl" "build/documento" 1756344113.23993 0
   "bibliografia.bib" 1756333040.15226 9498 bdc6d2896dff4fde472b255b0c6282cc ""
-  "build/documento.bcf" 1756336240.5549 116922 16c26fd92d9ee5758d5e2fd3bee163a1 "pdflatex"
+  "build/documento.bcf" 1756344113.12501 116922 16c26fd92d9ee5758d5e2fd3bee163a1 "pdflatex"
   (generated)
   "build/documento.bbl"
   "build/documento.blg"
   (rewritten before read)
-["pdflatex"] 1756336237.78956 "/Users/kariellycarvalho/Documents/Registro de Ponto/RTS - Karielly/documento.tex" "build/documento.pdf" "documento" 1756336240.66712 0
+["pdflatex"] 1756344110.23386 "/Users/kariellycarvalho/Documents/Registro de Ponto/RTS - Karielly/documento.tex" "build/documento.pdf" "documento" 1756344113.2402 0
   "/Users/kariellycarvalho/Documents/Registro de Ponto/RTS - Karielly/documento.tex" 1755897379.24822 667 d28e26cf7c9cec4963280b76ba8813f7 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -22,6 +22,7 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1136768653 1528 abec98dbc43e172678c11b3b9031252a ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1136768653 1512 f21f83efb36853c0b70002322c1ab3ad ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm" 1136768653 1520 eccf95517727cb11801f4f1aee3a21b4 ""
@@ -287,19 +288,19 @@
   "abntex-ifpi/Logo_ifpi.png" 1755905510 23290 f6f08ad8d9a60eae2bb970465bdc3068 ""
   "abntex-ifpi/abntex-ifpi.sty" 1755905510 10236 0efc2d99c590480d71bc2be4fad682ea ""
   "abntex-ifpi/tikz-uml.sty" 1755905510 302703 ed2f9b5dd419a64f254ecbf6a6653c7f ""
-  "build/documento.aux" 1756336240.5012 31082 c84f1c1966dcab012615e200cad8cece "pdflatex"
+  "build/documento.aux" 1756344113.0721 34076 c8f8966cd2903e063db10de0206a6e9f "pdflatex"
   "build/documento.bbl" 1756334792.44347 44686 078554ec03d71f49651206ced0caf3a8 "biber build/documento"
-  "build/documento.lot" 1756336240.55574 1218 e1047064dd1854548deac72170ef85b9 "pdflatex"
-  "build/documento.run.xml" 1756336240.55565 2547 7b222dc79294bba1b221d06e66558f57 "pdflatex"
-  "build/documento.toc" 1756336240.55576 5671 7844ef0c7e8eb3407b8d5bb8f7d9dfd8 "pdflatex"
-  "build/estrutura/pos-textual.aux" 1756336240.49894 9226 d320901b87430e7fe4337f86a225673d "pdflatex"
+  "build/documento.lot" 1756344113.12586 1618 dcfe3f6bbbe7b9b73c3dd5ac7f1b53ad "pdflatex"
+  "build/documento.run.xml" 1756344113.1258 2547 7b222dc79294bba1b221d06e66558f57 "pdflatex"
+  "build/documento.toc" 1756344113.12588 6132 8728797b3ec9e431f84c7247d30c2e3c "pdflatex"
+  "build/estrutura/pos-textual.aux" 1756344113.06952 9226 f0c2f307d0ad35cc0c53e6c1d68e9859 "pdflatex"
   "capitulos/consideracoes.tex" 1755905510 479 c3af707a97017d2abfe7741ae06ee27e ""
   "capitulos/fundamentacao-teorica.tex" 1756333149.49972 10400 6eb59429f552c1d80bad33e7df855f4f ""
   "capitulos/introducao.tex" 1756327307.39853 11034 277bbf590e0d507ea90d9eefd0b107a1 ""
   "capitulos/modelagem-projeto.tex" 1755905510 4348 dc3fa360cb59f25edf62b425171a98ed ""
-  "capitulos/requisitos.tex" 1756336231.78927 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "capitulos/requisitos.tex" 1756343393.44094 6687 47a5c83363829c36f27bddf013575dcd ""
   "capitulos/software.tex" 1755905510 756 ad5ad8cf6d197d40a7cba2af15c44b65 ""
-  "capitulos/tecnologias.tex" 1755905510 3133 0c39fae4725e3131235b01f9b628b4e1 ""
+  "capitulos/tecnologias.tex" 1756344112.32951 5119 75c182375baf836be1a317daba984a56 ""
   "configuracoes/citacoes.tex" 1756327006.29899 1547 1dad4248da77ed47de7d10a4f7aeb9b2 ""
   "configuracoes/cores.tex" 1755905510 440 9a2f769c3b95da4a04b4cd29a83d26ce ""
   "configuracoes/espacamentos.tex" 1755905510 204 5835d4f4e498271661fe6a684901f672 ""
