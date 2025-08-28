@@ -483,12 +483,6 @@ INPUT ./configuracoes/espacamentos.tex
 INPUT ./configuracoes/espacamentos.tex
 INPUT ./configuracoes/espacamentos.tex
 INPUT configuracoes/espacamentos.tex
-INPUT build/documento.aux
-INPUT build/documento.aux
-INPUT build/documento.aux
-INPUT build/estrutura/pos-textual.aux
-INPUT build/estrutura/pos-textual.aux
-INPUT build/estrutura/pos-textual.aux
 OUTPUT build/documento.aux
 INPUT /usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -634,9 +628,6 @@ INPUT ./pre-textual/lista-de-tabelas.tex
 INPUT ./pre-textual/lista-de-tabelas.tex
 INPUT ./pre-textual/lista-de-tabelas.tex
 INPUT pre-textual/lista-de-tabelas.tex
-INPUT build/documento.lot
-INPUT build/documento.lot
-INPUT build/documento.lot
 INPUT ./pre-textual/siglas.tex
 INPUT ./pre-textual/siglas.tex
 INPUT ./pre-textual/siglas.tex
@@ -647,9 +638,6 @@ INPUT ./pre-textual/simbolos.tex
 INPUT ./pre-textual/simbolos.tex
 INPUT ./pre-textual/simbolos.tex
 INPUT pre-textual/simbolos.tex
-INPUT build/documento.toc
-INPUT build/documento.toc
-INPUT build/documento.toc
 INPUT ./estrutura/textual.tex
 INPUT ./estrutura/textual.tex
 INPUT ./estrutura/textual.tex
@@ -711,6 +699,11 @@ INPUT capitulos/arquitetura.tex
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/courier/pcrr8t.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/adobe/courier/pcrr8t.vf
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
+INPUT ./capitulos/funcionalidades.tex
+INPUT ./capitulos/funcionalidades.tex
+INPUT ./capitulos/funcionalidades.tex
+INPUT ./capitulos/funcionalidades.tex
+INPUT capitulos/funcionalidades.tex
 INPUT ./capitulos/software.tex
 INPUT ./capitulos/software.tex
 INPUT ./capitulos/software.tex
@@ -758,7 +751,6 @@ INPUT build/documento.aux
 INPUT build/estrutura/pos-textual.aux
 INPUT build/estrutura/pos-textual.aux
 INPUT build/estrutura/pos-textual.aux
-INPUT build/documento.run.xml
 OUTPUT build/documento.run.xml
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb

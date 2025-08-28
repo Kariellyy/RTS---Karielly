@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.22)  27 AUG 2025 23:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.22)  28 AUG 2025 13:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1574,7 +1574,8 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'brazil'.
- (build/documento.aux (build/estrutura/pos-textual.aux))
+
+No file documento.aux.
 \openout1 = `documento.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
@@ -1598,7 +1599,7 @@ LaTeX Font Info:    ... okay on input line 8.
 Package hyperref Info: Link coloring ON on input line 8.
 \myptabbox=\box156
 \myptabboxwidth=\skip333
- (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count615
 \scratchdimen=\dimen348
@@ -1783,7 +1784,9 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
 [4
 
 
-]) (./pre-textual/resumo.tex) (./pre-textual/resumo-lingua-estrangeira.tex) (./pre-textual/lista-de-ilustracoes.tex) (./pre-textual/lista-de-tabelas.tex (build/documento.lot)
+]) (./pre-textual/resumo.tex) (./pre-textual/resumo-lingua-estrangeira.tex) (./pre-textual/lista-de-ilustracoes.tex) (./pre-textual/lista-de-tabelas.tex
+No file documento.lot.
+
 
 [5
 
@@ -1792,13 +1795,13 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
 [6
 
 
-]) (./pre-textual/simbolos.tex) (build/documento.toc
+]) (./pre-textual/simbolos.tex)
+No file documento.toc.
+
 
 [7
 
-])
-
-[8]) (./estrutura/textual.tex (./capitulos/introducao.tex
+]) (./estrutura/textual.tex (./capitulos/introducao.tex
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 6.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
@@ -1809,7 +1812,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 
-[9
+[8
 
 
 ]
@@ -1823,39 +1826,49 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 
-[10]
+[9]
 
-[11]) (./capitulos/fundamentacao-teorica.tex
+[10]) (./capitulos/fundamentacao-teorica.tex
 
-[12]
+[11]
 
-[13
+[12
 
 ]
 
-[14]
+[13]
 
-[15]) (./capitulos/requisitos.tex
+[14]) (./capitulos/requisitos.tex
+
+[15]
 
 [16]
 
-[17]
+LaTeX Warning: Reference `tab:requisitos-funcionais' on page 17 undefined on input line 7.
+
 
 LaTeX Warning: Float too large for page by 21.34956pt on input line 85.
 
+
+LaTeX Warning: Reference `tab:requisitos-nao-funcionais' on page 17 undefined on input line 89.
+
 ) (./capitulos/tecnologias.tex
 
-[18
+[17
 
 ]
+
+[18]
 
 [19]
 
-[20]
-
-[21
+[20
 
 ]
+
+LaTeX Warning: Reference `tab:tecnologias-versoes' on page 21 undefined on input line 40.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 61--62
 []|\T1/phv/m/n/10.95 (+20) Componentes
  []
@@ -1892,120 +1905,355 @@ Overfull \hbox (4.4972pt too wide) in paragraph at lines 47--96
 
 ) (./capitulos/arquitetura.tex
 
+[21]
+
 [22]
 
-[23]
+LaTeX Warning: Reference `fig:arquitetura-geral' on page 23 undefined on input line 9.
+
+
 Overfull \hbox (6.09445pt too wide) in paragraph at lines 36--36
  [][]\T1/phv/m/n/12 (-20) PostgreSQL 
  []
 
 
 
-[24
+[23
 
 ]
+
+LaTeX Warning: Reference `fig:modelo-entidades' on page 24 undefined on input line 75.
+
+
+
+[24]
 
 [25]
 
 [26]
-Overfull \hbox (22.31232pt too wide) in paragraph at lines 224--224
- [][]\T1/phv/b/n/12 (-20) DatabaseModule 
+
+LaTeX Warning: Reference `fig:arquitetura-backend' on page 27 undefined on input line 224.
+
+
+Overfull \hbox (10.32231pt too wide) in paragraph at lines 238--238
+ []\T1/phv/m/n/12 (-20) Autenticação 
  []
 
 
-Overfull \hbox (20.34836pt too wide) in paragraph at lines 233--233
- [][]\T1/phv/b/n/12 (-20) UsuariosModule 
+Overfull \hbox (18.79062pt too wide) in paragraph at lines 240--240
+ []\T1/phv/m/n/12 (-20) Configurações 
  []
 
 
-Overfull \hbox (26.23999pt too wide) in paragraph at lines 239--239
- [][]\T1/phv/b/n/12 (-20) EmpresasModule 
+Overfull \hbox (23.48506pt too wide) in paragraph at lines 240--240
+ []\T1/phv/m/n/12 (-20) Geolocalização 
  []
 
 
-Overfull \hbox (2.86386pt too wide) in paragraph at lines 245--245
- [][]\T1/phv/b/n/12 (-20) PontoModule 
+Overfull \hbox (8.9097pt too wide) in paragraph at lines 241--241
+ []\T1/phv/m/n/12 (-20) Justificativas 
  []
 
 
-Overfull \hbox (17.00493pt too wide) in paragraph at lines 248--248
- [][]\T1/phv/m/n/12 (-20) RegistroPonto 
- []
-
-
-Overfull \hbox (8.9097pt too wide) in paragraph at lines 249--249
- [][]\T1/phv/m/n/12 (-20) Justificativas 
- []
-
-
-Overfull \hbox (8.9097pt too wide) in paragraph at lines 250--250
- [][]\T1/phv/m/n/12 (-20) Justificativas 
- []
-
-
-Overfull \hbox (10.20299pt too wide) in paragraph at lines 253--253
+Overfull \hbox (10.20299pt too wide) in paragraph at lines 244--244
  [][]\T1/phv/b/n/12 (-20) PostgreSQL 
  []
 
 
-
-[27]
-Overfull \hbox (1.59952pt too wide) in paragraph at lines 298--299
+Overfull \hbox (1.59952pt too wide) in paragraph at lines 271--272
 []\T1/phv/m/n/12 (-20) Implementada atra-vés do Ty-pe-ORM, for-
  []
 
 
 
-[28]
-Overfull \hbox (9.76126pt too wide) in paragraph at lines 344--344
+[27]
+
+LaTeX Warning: Reference `fig:arquitetura-frontend' on page 28 undefined on input line 294.
+
+
+Overfull \hbox (9.76126pt too wide) in paragraph at lines 317--317
  [][]\T1/phv/m/n/12 (-20) GoogleMaps 
  []
 
 
-Overfull \hbox (9.76128pt too wide) in paragraph at lines 347--347
+Overfull \hbox (9.76128pt too wide) in paragraph at lines 320--320
  []\T1/phv/m/n/12 (-20) Components 
  []
 
 
-Overfull \hbox (9.76128pt too wide) in paragraph at lines 348--348
+Overfull \hbox (9.76128pt too wide) in paragraph at lines 321--321
  []\T1/phv/m/n/12 (-20) Components 
  []
 
 
-Overfull \hbox (24.80203pt too wide) in paragraph at lines 357--357
+Overfull \hbox (24.80203pt too wide) in paragraph at lines 330--330
  [][]\T1/phv/m/n/12 (-20) useGeolocation 
  []
 
 
 
+[28]
+
 [29]
-Overfull \hbox (6.09445pt too wide) in paragraph at lines 433--433
- [][]\T1/phv/m/n/12 (-20) PostgreSQL 
- []
+
+LaTeX Warning: Reference `fig:fluxo-auth' on page 30 undefined on input line 391.
 
 
 
-[30]
+[30]) (./capitulos/funcionalidades.tex
 
 [31]
 
-[32]) (./capitulos/software.tex) (./capitulos/consideracoes.tex))
+LaTeX Warning: File `imagens/tela-login.png' not found on input line 11.
+
+
+./capitulos/funcionalidades.tex:11: Package pdftex.def Error: File `imagens/tela-login.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...dth=0.8\textwidth]{imagens/tela-login.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+
+[32
+
+]
+
+LaTeX Warning: File `imagens/dashboard-principal.png' not found on input line 28.
+
+
+./capitulos/funcionalidades.tex:28: Package pdftex.def Error: File `imagens/dashboard-principal.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ...extwidth]{imagens/dashboard-principal.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
 
 [33]
+
+LaTeX Warning: File `imagens/listagem-funcionarios.png' not found on input line 39.
+
+
+./capitulos/funcionalidades.tex:39: Package pdftex.def Error: File `imagens/listagem-funcionarios.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 ...twidth]{imagens/listagem-funcionarios.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+
+[34]
+
+[35]
+
+LaTeX Warning: File `imagens/gestao-departamentos.png' not found on input line 58.
+
+
+./capitulos/funcionalidades.tex:58: Package pdftex.def Error: File `imagens/gestao-departamentos.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58 ...xtwidth]{imagens/gestao-departamentos.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `imagens/configuracao-jornada.png' not found on input line 69.
+
+
+./capitulos/funcionalidades.tex:69: Package pdftex.def Error: File `imagens/configuracao-jornada.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 ...xtwidth]{imagens/configuracao-jornada.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+
+[36]
+
+LaTeX Warning: File `imagens/gestao-justificativas.png' not found on input line 80.
+
+
+./capitulos/funcionalidades.tex:80: Package pdftex.def Error: File `imagens/gestao-justificativas.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.80 ...twidth]{imagens/gestao-justificativas.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+
+[37]
+
+LaTeX Warning: File `imagens/controle-ausencias.png' not found on input line 93.
+
+
+./capitulos/funcionalidades.tex:93: Package pdftex.def Error: File `imagens/controle-ausencias.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.93 ...textwidth]{imagens/controle-ausencias.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+
+[38]
+
+[39]
+
+LaTeX Warning: File `imagens/gestao-ferias.png' not found on input line 113.
+
+
+./capitulos/funcionalidades.tex:113: Package pdftex.def Error: File `imagens/gestao-ferias.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.113 ...1.0\textwidth]{imagens/gestao-ferias.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+
+[40]
+
+LaTeX Warning: File `imagens/extrato-ponto.png' not found on input line 135.
+
+
+./capitulos/funcionalidades.tex:135: Package pdftex.def Error: File `imagens/extrato-ponto.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.135 ...1.0\textwidth]{imagens/extrato-ponto.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+
+[41]
+
+LaTeX Warning: File `imagens/relatorio-contador.png' not found on input line 148.
+
+
+./capitulos/funcionalidades.tex:148: Package pdftex.def Error: File `imagens/relatorio-contador.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.148 ...extwidth]{imagens/relatorio-contador.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+
+[42]
+
+LaTeX Warning: File `imagens/configuracoes-empresa.png' not found on input line 168.
+
+
+./capitulos/funcionalidades.tex:168: Package pdftex.def Error: File `imagens/configuracoes-empresa.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.168 ...width]{imagens/configuracoes-empresa.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+
+[43]
+
+LaTeX Warning: File `imagens/registro-ponto-funcionario.png' not found on input line 189.
+
+
+./capitulos/funcionalidades.tex:189: Package pdftex.def Error: File `imagens/registro-ponto-funcionario.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.189 ...]{imagens/registro-ponto-funcionario.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+
+[44]
+
+LaTeX Warning: File `imagens/configuracao-tema.png' not found on input line 200.
+
+
+./capitulos/funcionalidades.tex:200: Package pdftex.def Error: File `imagens/configuracao-tema.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.200 ...textwidth]{imagens/configuracao-tema.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+) (./capitulos/software.tex) (./capitulos/consideracoes.tex))
+
+[45]
 \openout2 = `estrutura/pos-textual.aux'.
 
  (./estrutura/pos-textual.tex (./pos-textual/referencias.tex)
 
-[34
+[46
 
 
 ]
 
-[35]
+[47]
 
-[36] (./pos-textual/glossario.tex) (./pos-textual/apendices.tex) (./pos-textual/anexos.tex) (./pos-textual/indices.tex))
+[48] (./pos-textual/glossario.tex) (./pos-textual/apendices.tex) (./pos-textual/anexos.tex) (./pos-textual/indices.tex))
 
-[37]
+[49]
 \tf@lot=\write6
 \openout6 = `documento.lot'.
 
@@ -2019,23 +2267,38 @@ enddocument/afterlastpage (AED): lastpage setting LastPage.
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package lastpage Warning: Rerun to get the references right on input line 28.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                documento
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'documento.run.xml'.
 \openout1 = `documento.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 51674 strings out of 473190
- 1048916 string characters out of 5715800
- 2127412 words of memory out of 5000000
- 73522 multiletter control sequences out of 15000+600000
- 607342 words of font info for 313 fonts, out of 8000000 for 9000
+ 51818 strings out of 473190
+ 1059513 string characters out of 5715800
+ 2118370 words of memory out of 5000000
+ 73620 multiletter control sequences out of 15000+600000
+ 607159 words of font info for 315 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  119i,13n,134p,1271b,4447s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on build/documento.pdf (38 pages, 177107 bytes).
+Output written on build/documento.pdf (50 pages, 184037 bytes).
 PDF statistics:
- 822 PDF objects out of 1000 (max. 8388607)
- 748 compressed objects within 8 object streams
- 162 named destinations out of 1000 (max. 500000)
- 54938 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 865 PDF objects out of 1000 (max. 8388607)
+ 779 compressed objects within 8 object streams
+ 210 named destinations out of 1000 (max. 500000)
+ 55090 words of extra memory for PDF output out of 61914 (max. 10000000)
 

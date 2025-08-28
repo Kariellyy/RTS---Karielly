@@ -170,25 +170,39 @@ A Figura~\ref{fig:modelo-entidades} apresenta o diagrama de classes UML do model
 
 \subsection{Entidades Principais}
 
-O modelo de dados é composto pelas seguintes entidades principais:
+O modelo de dados é composto por oito entidades principais, organizadas hierarquicamente para atender aos requisitos funcionais do sistema:
 
-\begin{description}
-    \item[Empresa] Representa a organização que utiliza o sistema. Armazena informações corporativas, configurações de geolocalização (latitude, longitude, raio permitido) e políticas de tolerância para registros de ponto.
-    
-    \item[Usuario] Modela os usuários do sistema (proprietários, administradores e funcionários). Implementa controle de acesso baseado em papéis (RBAC - \textit{Role-Based Access Control}) através do campo \texttt{papel}.
-    
-    \item[Departamento] Representa as divisões organizacionais da empresa, permitindo estruturação hierárquica e controle administrativo.
-    
-    \item[Cargo] Define as posições/funções dentro da organização, incluindo informações salariais base para cálculos de folha de pagamento.
-    
-    \item[InformacoesTrabalhistas] Consolida dados contratuais do funcionário, incluindo data de admissão, carga horária semanal e salário.
-    
-    \item[HorarioFuncionario] Modela os horários de trabalho individuais, permitindo flexibilidade na definição de expedientes por dia da semana.
-    
-    \item[RegistroPonto] Armazena os registros de ponto dos funcionários, incluindo validação geográfica e controle de status (aprovado, pendente, justificado).
-    
-    \item[Justificativa] Implementa o sistema de justificativas para registros irregulares, com workflow de aprovação.
-\end{description}
+\subsubsection{Empresa}
+
+A entidade \texttt{Empresa} representa a organização central que utiliza o sistema. Esta entidade armazena informações corporativas essenciais, incluindo dados de identificação (nome, CNPJ, email), configurações de geolocalização (latitude, longitude, raio permitido) e políticas operacionais de tolerância para registros de ponto. A empresa serve como entidade agregadora para todos os demais componentes do sistema.
+
+\subsubsection{Usuario}
+
+A entidade \texttt{Usuario} modela os diferentes tipos de usuários do sistema: proprietários, administradores e funcionários. Implementa um sistema de controle de acesso baseado em papéis (RBAC - \textit{Role-Based Access Control}) através do campo \texttt{papel}, garantindo que cada usuário tenha acesso apenas às funcionalidades compatíveis com seu nível de autorização.
+
+\subsubsection{Departamento}
+
+A entidade \texttt{Departamento} representa as divisões organizacionais da empresa, permitindo uma estruturação hierárquica clara e facilitando o controle administrativo. Cada departamento pode conter múltiplos cargos e funcionários, proporcionando flexibilidade na organização interna.
+
+\subsubsection{Cargo}
+
+A entidade \texttt{Cargo} define as posições e funções específicas dentro da organização. Além das informações descritivas, armazena dados salariais base que servem como referência para cálculos de folha de pagamento e relatórios financeiros.
+
+\subsubsection{InformacoesTrabalhistas}
+
+A entidade \texttt{InformacoesTrabalhistas} consolida todos os dados contratuais do funcionário, incluindo data de admissão, período de início dos registros de ponto, carga horária semanal contratual e informações salariais. Esta entidade estabelece a ponte entre os dados pessoais do usuário e suas responsabilidades profissionais.
+
+\subsubsection{HorarioFuncionario}
+
+A entidade \texttt{HorarioFuncionario} modela os horários de trabalho individualizados, permitindo flexibilidade na definição de expedientes específicos por dia da semana. Suporta configurações de intervalos para refeições e diferentes jornadas de trabalho conforme as necessidades operacionais.
+
+\subsubsection{RegistroPonto}
+
+A entidade \texttt{RegistroPonto} armazena todos os registros de ponto dos funcionários, incorporando validação geográfica automática e controle rigoroso de status (aprovado, pendente, justificado). Cada registro inclui coordenadas GPS, timestamp preciso e indicadores de conformidade com as políticas empresariais.
+
+\subsubsection{Justificativa}
+
+A entidade \texttt{Justificativa} implementa um sistema completo de justificativas para registros irregulares, incluindo workflow de aprovação, categorização por tipos específicos e rastreabilidade completa do processo decisório. Permite que gestores analisem e aprovem/rejeitem justificativas de forma controlada.
 
 \subsection{Relacionamentos e Cardinalidades}
 
@@ -212,74 +226,33 @@ A arquitetura do \textit{backend} segue o padrão modular do NestJS, organizando
 \begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[
-    module/.style={rectangle, draw, fill=blue!15, text width=2.5cm, text centered, minimum height=1.2cm, rounded corners=3pt},
-    service/.style={rectangle, draw, fill=green!15, text width=2cm, text centered, minimum height=0.8cm, rounded corners=2pt},
-    controller/.style={rectangle, draw, fill=yellow!15, text width=2cm, text centered, minimum height=0.8cm, rounded corners=2pt},
-    entity/.style={rectangle, draw, fill=red!15, text width=2cm, text centered, minimum height=0.8cm, rounded corners=2pt},
-    guard/.style={rectangle, draw, fill=purple!15, text width=2cm, text centered, minimum height=0.8cm, rounded corners=2pt}
+    app/.style={rectangle, draw, fill=blue!20, text width=2.5cm, text centered, minimum height=1cm},
+    module/.style={rectangle, draw, fill=green!15, text width=2cm, text centered, minimum height=0.8cm},
+    db/.style={cylinder, draw, fill=yellow!15, text width=2cm, text centered, minimum height=1cm, aspect=0.25}
 ]
 
-% Core Module
-\node[module] (app) at (0,8) {\textbf{AppModule}\\Main Application};
-\node[module] (database) at (4,8) {\textbf{DatabaseModule}\\TypeORM Config};
+% Aplicação Principal
+\node[app] (app) at (6,8) {\textbf{NestJS Application}\\(AppModule)};
 
-% Auth Module
-\node[module] (auth-mod) at (0,6) {\textbf{AuthModule}};
-\node[controller] (auth-ctrl) at (-2,5) {Auth\\Controller};
-\node[service] (auth-svc) at (0,5) {Auth\\Service};
-\node[guard] (jwt-guard) at (2,5) {JWT\\Guard};
+% Módulos de Negócio
+\node[module] (auth) at (0,5) {\textbf{Auth}\\Autenticação\\JWT};
+\node[module] (users) at (4,5) {\textbf{Usuários}\\CRUD\\Gestão};
+\node[module] (companies) at (8,5) {\textbf{Empresas}\\Configurações\\Geolocalização};
+\node[module] (point) at (12,5) {\textbf{Ponto}\\Registros\\Justificativas};
 
-% Users Module
-\node[module] (users-mod) at (4,6) {\textbf{UsuariosModule}};
-\node[controller] (users-ctrl) at (3,5) {Usuarios\\Controller};
-\node[service] (users-svc) at (4,5) {Usuarios\\Service};
-\node[entity] (user-entity) at (5,5) {Usuario\\Entity};
+% Banco de Dados
+\node[db] (database) at (6,1) {\textbf{PostgreSQL}\\TypeORM};
 
-% Companies Module
-\node[module] (companies-mod) at (8,6) {\textbf{EmpresasModule}};
-\node[controller] (companies-ctrl) at (7,5) {Empresas\\Controller};
-\node[service] (companies-svc) at (8,5) {Empresas\\Service};
-\node[entity] (company-entity) at (9,5) {Empresa\\Entity};
+% Conexões
+\draw[->] (app) -- (auth);
+\draw[->] (app) -- (users);
+\draw[->] (app) -- (companies);
+\draw[->] (app) -- (point);
 
-% Point Module
-\node[module] (point-mod) at (0,3) {\textbf{PontoModule}};
-\node[controller] (point-ctrl) at (-1,2) {Ponto\\Controller};
-\node[service] (point-svc) at (0,2) {Ponto\\Service};
-\node[entity] (point-entity) at (1,2) {RegistroPonto\\Entity};
-\node[controller] (just-ctrl) at (-1,1) {Justificativas\\Controller};
-\node[service] (just-svc) at (0,1) {Justificativas\\Service};
-
-% Database layer
-\node[entity] (postgres) at (4,0) {\textbf{PostgreSQL}\\Database};
-
-% Connections
-\draw[->] (app) -- (auth-mod);
-\draw[->] (app) -- (users-mod);
-\draw[->] (app) -- (companies-mod);
-\draw[->] (app) -- (point-mod);
-\draw[->] (app) -- (database);
-
-\draw[->] (auth-mod) -- (auth-ctrl);
-\draw[->] (auth-mod) -- (auth-svc);
-\draw[->] (auth-mod) -- (jwt-guard);
-
-\draw[->] (users-mod) -- (users-ctrl);
-\draw[->] (users-mod) -- (users-svc);
-\draw[->] (users-mod) -- (user-entity);
-
-\draw[->] (companies-mod) -- (companies-ctrl);
-\draw[->] (companies-mod) -- (companies-svc);
-\draw[->] (companies-mod) -- (company-entity);
-
-\draw[->] (point-mod) -- (point-ctrl);
-\draw[->] (point-mod) -- (point-svc);
-\draw[->] (point-mod) -- (point-entity);
-\draw[->] (point-mod) -- (just-ctrl);
-\draw[->] (point-mod) -- (just-svc);
-
-\draw[->] (user-entity) -- (postgres);
-\draw[->] (company-entity) -- (postgres);
-\draw[->] (point-entity) -- (postgres);
+\draw[->] (auth) -- (database);
+\draw[->] (users) -- (database);
+\draw[->] (companies) -- (database);
+\draw[->] (point) -- (database);
 
 \end{tikzpicture}
 \caption{Arquitetura modular do backend NestJS}
@@ -419,38 +392,40 @@ O sistema implementa um fluxo de autenticação robusto baseado em JWT (\textit{
 
 \begin{figure}[htbp]
 \centering
-\begin{tikzpicture}[
-    actor/.style={rectangle, draw, fill=blue!15, text width=2cm, text centered, minimum height=1cm},
-    system/.style={rectangle, draw, fill=green!15, text width=2.5cm, text centered, minimum height=1cm},
-    db/.style={cylinder, draw, fill=yellow!15, text width=2cm, text centered, minimum height=1.2cm, aspect=0.25},
-    arrow/.style={->, thick}
-]
+\begin{tikzpicture}[scale=0.7, every node/.style={transform shape}]
+    % Participantes
+    \node[draw, rounded corners, thick, fill=blue!10, minimum width=2.5cm, minimum height=1cm] (client) at (0,12) {Frontend NextAuth};
+    \node[draw, rounded corners, thick, fill=green!10, minimum width=2.5cm, minimum height=1cm] (auth) at (4,12) {AuthController};
+    \node[draw, rounded corners, thick, fill=orange!10, minimum width=2.5cm, minimum height=1cm] (service) at (8,12) {AuthService};
+    \node[draw, rounded corners, thick, fill=purple!10, minimum width=2.5cm, minimum height=1cm] (users) at (12,12) {UsuariosService};
+    \node[draw, rounded corners, thick, fill=cyan!10, minimum width=2.5cm, minimum height=1cm] (company) at (16,12) {EmpresasService};
 
-% Actors and Systems
-\node[actor] (user) at (0,10) {Usuário};
-\node[system] (frontend) at (4,10) {Frontend\\(NextAuth)};
-\node[system] (backend) at (8,10) {Backend\\(NestJS)};
-\node[db] (database) at (12,10) {PostgreSQL};
+    % Linhas de vida
+    \draw[dashed] (client) -- (0,-1);
+    \draw[dashed] (auth) -- (4,-1);
+    \draw[dashed] (service) -- (8,-1);
+    \draw[dashed] (users) -- (12,-1);
+    \draw[dashed] (company) -- (16,-1);
 
-% Authentication Flow
-\node[rectangle, fill=gray!10, text width=13cm, minimum height=8cm] at (6,6) {};
-\node at (6,9.5) {\textbf{Fluxo de Autenticação}};
+    % Mensagens do fluxo de autenticação
+    \draw[->, thick] (0,11) -- node[above, font=\tiny]{1. POST /auth/login} (4,11);
+    \draw[->, thick] (4,10) -- node[above, font=\tiny]{2. login(email, password)} (8,10);
+    \draw[->, thick] (8,9) -- node[above, font=\tiny]{3. findByEmailWithPassword(email)} (12,9);
+    \draw[<-, thick] (8,8) -- node[below, font=\tiny]{4. user + password} (12,8);
+    \draw[->, thick] (8,7) -- node[above, font=\tiny]{5. validatePassword(password, hash)} (12,7);
+    \draw[<-, thick] (8,6) -- node[below, font=\tiny]{6. isPasswordValid: boolean} (12,6);
+    \draw[->, thick] (8,5) -- node[above, font=\tiny]{7. findOne(user.empresaId)} (16,5);
+    \draw[<-, thick] (8,4) -- node[below, font=\tiny]{8. empresa} (16,4);
 
-% Step by step
-\draw[arrow] (user) -- (frontend) node[midway, above] {1. Login};
-\draw[arrow] (frontend) -- (backend) node[midway, above] {2. POST /auth/login};
-\draw[arrow] (backend) -- (database) node[midway, above] {3. Validar credenciais};
-\draw[arrow] (database) -- (backend) node[midway, below] {4. Dados do usuário};
-\draw[arrow] (backend) -- (frontend) node[midway, below] {5. JWT Token + User};
-\draw[arrow] (frontend) -- (user) node[midway, below] {6. Redirecionamento};
+    % Processamento interno no AuthService
+    \node[draw, fill=yellow!20, align=left, font=\tiny] at (8,2.5) {9. Criar JWT Payload:\\sub: user.id\\email: user.email\\papel: user.papel\\empresaId: user.empresaId};
 
-% Additional flows
-\node at (2,7) {\small 7. Middleware valida token};
-\node at (6,6.5) {\small 8. Guards verificam permissões};
-\node at (10,6) {\small 9. Refresh token automático};
+    \node[draw, fill=yellow!20, align=left, font=\tiny] at (8,1) {10. Gerar JWT Token\\jwtService.sign(payload)};
 
+    \draw[<-, thick] (4,0) -- node[below, font=\tiny]{11. AuthResponse \{access\_token, user, empresa\}} (8,0);
+    \draw[<-, thick] (0,-0.5) -- node[below, font=\tiny]{12. JWT + dados do usuário} (4,-0.5);
 \end{tikzpicture}
-\caption{Fluxo de autenticação e autorização}
+\caption{Diagrama de sequência - fluxo de autenticação}
 \label{fig:fluxo-auth}
 \end{figure}
 
@@ -470,84 +445,14 @@ O sistema de segurança é composto pelos seguintes elementos:
 
 Um dos diferenciais do sistema é a validação automática de geolocalização para registros de ponto. O processo utiliza a API de Geolocalização do navegador integrada com o Google Maps API para validação de presença física no local de trabalho.
 
-A Figura~\ref{fig:validacao-geo} apresenta o algoritmo de validação geográfica implementado.
+O algoritmo de validação geográfica segue os seguintes passos:
 
-\begin{figure}[htbp]
-\centering
-\begin{tikzpicture}[
-    start/.style={ellipse, draw, fill=green!20, text width=2cm, text centered},
-    process/.style={rectangle, draw, fill=blue!15, text width=3cm, text centered, minimum height=1cm},
-    decision/.style={diamond, draw, fill=yellow!15, text width=2.5cm, text centered, minimum height=1cm},
-    end/.style={ellipse, draw, fill=red!20, text width=2cm, text centered}
-]
-
-\node[start] (inicio) at (0,10) {Registro de Ponto};
-\node[process] (geolocalizacao) at (0,8.5) {Obter Localização\\do Dispositivo};
-\node[process] (empresa-loc) at (0,7) {Buscar Localização\\da Empresa};
-\node[process] (calculo) at (0,5.5) {Calcular Distância\\(Haversine)};
-\node[decision] (dentro-raio) at (0,4) {Dentro do\\Raio?};
-\node[process] (aprovado) at (-3,2.5) {Status:\\APROVADO};
-\node[decision] (exige-just) at (3,2.5) {Empresa Exige\\Justificativa?};
-\node[process] (pendente) at (3,1) {Status:\\PENDENTE};
-\node[process] (aprovado-fora) at (6,1) {Status:\\APROVADO};
-\node[end] (fim) at (0,0) {Registro\\Salvo};
-
-% Connections
-\draw[->] (inicio) -- (geolocalizacao);
-\draw[->] (geolocalizacao) -- (empresa-loc);
-\draw[->] (empresa-loc) -- (calculo);
-\draw[->] (calculo) -- (dentro-raio);
-\draw[->] (dentro-raio) -- (aprovado) node[midway, left] {Sim};
-\draw[->] (dentro-raio) -- (exige-just) node[midway, right] {Não};
-\draw[->] (exige-just) -- (pendente) node[midway, left] {Sim};
-\draw[->] (exige-just) -- (aprovado-fora) node[midway, above] {Não};
-\draw[->] (aprovado) -- (fim);
-\draw[->] (pendente) -- (fim);
-\draw[->] (aprovado-fora) -- (fim);
-
-\end{tikzpicture}
-\caption{Algoritmo de validação geográfica}
-\label{fig:validacao-geo}
-\end{figure}
+\begin{enumerate}
+    \item \textbf{Obtenção da localização}: Captura das coordenadas GPS do dispositivo do funcionário
+    \item \textbf{Busca da localização da empresa}: Recuperação das coordenadas cadastradas da empresa
+    \item \textbf{Cálculo de distância}: Aplicação da fórmula de Haversine para determinar a distância precisa
+    \item \textbf{Validação do raio}: Verificação se a distância está dentro do raio permitido
+    \item \textbf{Definição do status}: Aprovação automática ou solicitação de justificativa conforme configuração
+\end{enumerate}
 
 O algoritmo implementa a fórmula de Haversine para cálculo preciso de distância entre coordenadas geográficas, considerando a curvatura da Terra. A validação permite configuração flexível de raio de tolerância por empresa e políticas diferenciadas para registros fora da área permitida.
-
-\section{Integração com Serviços Externos}
-
-O sistema integra-se com serviços externos para expandir suas funcionalidades:
-
-\subsection{Google Maps API}
-
-A integração com o Google Maps API proporciona:
-
-\begin{itemize}
-    \item Seleção visual de localização da empresa através de interface interativa;
-    \item Geocodificação reversa para conversão de coordenadas em endereços;
-    \item Validação de endereços e otimização de coordenadas;
-    \item Visualização de mapas para administradores supervisionarem registros.
-\end{itemize}
-
-\subsection{Geolocation API}
-
-A API nativa de geolocalização do navegador fornece:
-
-\begin{itemize}
-    \item Coordenadas precisas do dispositivo do funcionário;
-    \item Detecção automática de localização sem intervenção manual;
-    \item Tratamento de erros e permissões negadas;
-    \item Otimização de precisão baseada em contexto.
-\end{itemize}
-
-\section{Considerações de Performance e Escalabilidade}
-
-A arquitetura implementada considera aspectos fundamentais de performance e escalabilidade:
-
-\begin{description}
-    \item[Cache Inteligente] Implementação de cache em múltiplas camadas: browser cache, Redis para sessões e cache de consultas no TypeORM;
-    \item[Lazy Loading] Carregamento sob demanda de componentes React e módulos Next.js;
-    \item[Database Optimization] Índices otimizados, consultas eficientes e relacionamentos bem estruturados;
-    \item[API Pagination] Implementação de paginação em todas as consultas que retornam listas;
-    \item[Horizontal Scaling] Arquitetura preparada para escalamento horizontal através de load balancers e múltiplas instâncias.
-\end{description}
-
-A arquitetura apresentada demonstra uma implementação robusta e moderna, seguindo as melhores práticas da engenharia de \textit{software} e proporcionando uma base sólida para evolução e manutenção do sistema de registro de ponto eletrônico.
