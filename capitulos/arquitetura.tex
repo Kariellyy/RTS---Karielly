@@ -72,42 +72,99 @@ A arquitetura adotada proporciona as seguintes vantagens:
 
 O modelo de dados foi projetado seguindo os princípios da normalização de banco de dados e os padrões do Domain-Driven Design (DDD). O sistema utiliza PostgreSQL como sistema de gerenciamento de banco de dados, aproveitando suas características de robustez, conformidade com ACID e suporte a tipos de dados complexos.
 
-A Figura~\ref{fig:modelo-entidades} apresenta o diagrama entidade-relacionamento (DER) do sistema, destacando as principais entidades e seus relacionamentos.
+A Figura~\ref{fig:modelo-entidades} apresenta o diagrama de classes UML do modelo de dados, destacando as principais entidades, seus atributos, métodos e relacionamentos.
 
 \begin{figure}[htbp]
 \centering
 \resizebox{\textwidth}{!}{%
-\begin{tikzpicture}[
-    entity/.style={rectangle, draw, fill=blue!10, text width=3cm, text centered, minimum height=1.5cm},
-    attribute/.style={ellipse, draw, fill=yellow!10, text width=2cm, text centered, minimum height=0.8cm},
-    relationship/.style={diamond, draw, fill=green!10, text width=2cm, text centered, minimum height=1cm},
-    isa/.style={triangle, draw, fill=red!10, text width=1.5cm, text centered, minimum height=1cm}
-]
+\begin{tikzpicture}[scale=0.4,every node/.style={transform shape}]
 
-% Entidades principais
-\node[entity] (empresa) at (0,6) {\textbf{Empresa}\\id, nome, cnpj\\email, latitude\\longitude, raio};
-\node[entity] (usuario) at (6,6) {\textbf{Usuario}\\id, nome, email\\password, papel\\status, cpf};
-\node[entity] (departamento) at (0,3) {\textbf{Departamento}\\id, nome\\descricao};
-\node[entity] (cargo) at (0,0) {\textbf{Cargo}\\id, nome\\descricao\\base\_salarial};
-\node[entity] (info-trab) at (6,3) {\textbf{InformacoesTrabalhistas}\\id, data\_admissao\\carga\_horaria\\salario};
-\node[entity] (horario-func) at (12,6) {\textbf{HorarioFuncionario}\\id, dia\_semana\\horario\_inicio\\horario\_fim};
-\node[entity] (registro-ponto) at (6,0) {\textbf{RegistroPonto}\\id, tipo, status\\data\_hora, latitude\\longitude};
-\node[entity] (justificativa) at (12,0) {\textbf{Justificativa}\\id, motivo, tipo\\status, data\_aprovacao};
+% Organização hierárquica com máximo espaçamento
 
-% Relacionamentos
-\draw[thick] (empresa) -- (usuario) node[midway, above] {1:N};
-\draw[thick] (empresa) -- (departamento) node[midway, left] {1:N};
-\draw[thick] (departamento) -- (cargo) node[midway, left] {1:N};
-\draw[thick] (usuario) -- (info-trab) node[midway, right] {1:1};
-\draw[thick] (info-trab) -- (cargo) node[midway, below] {N:1};
-\draw[thick] (info-trab) -- (departamento) node[midway, above] {N:1};
-\draw[thick] (usuario) -- (horario-func) node[midway, above] {1:N};
-\draw[thick] (usuario) -- (registro-ponto) node[midway, left] {1:N};
-\draw[thick] (registro-ponto) -- (justificativa) node[midway, above] {1:N};
+% Nível 1: Entidade principal
+\umlclass[x=8, y=20, width=1.5cm]{Empresa}{
+    + id: UUID \\
+    + nome: String \\
+    + cnpj: String
+}{
+    + validarRaio(): Boolean
+}
+
+% Nível 2: Entidades dependentes da empresa  
+\umlclass[x=0, y=14, width=1.5cm]{Departamento}{
+    + id: UUID \\
+    + nome: String \\
+    + empresaId: UUID
+}{
+    + listarCargos(): Cargo[]
+}
+
+\umlclass[x=8, y=14, width=1.5cm]{Usuario}{
+    + id: UUID \\
+    + nome: String \\
+    + email: String \\
+    + papel: UserRole
+}{
+    + autenticar(): Boolean
+}
+
+\umlclass[x=16, y=14, width=1.5cm]{HorarioFuncionario}{
+    + id: UUID \\
+    + diaSemana: Integer \\
+    + horarioInicio: Time
+}{
+    + calcularHoras(): Number
+}
+
+% Nível 3: Entidades específicas
+\umlclass[x=0, y=8, width=1.5cm]{Cargo}{
+    + id: UUID \\
+    + nome: String \\
+    + baseSalarial: Decimal
+}{
+    + calcularSalario(): Decimal
+}
+
+\umlclass[x=8, y=8, width=2cm]{InformacoesTrabalhistas}{
+    + id: UUID \\
+    + usuarioId: UUID \\
+    + dataAdmissao: Date
+}{
+    + calcularTempo(): Number
+}
+
+% Nível 4: Entidades operacionais
+\umlclass[x=4, y=2, width=1.8cm]{RegistroPonto}{
+    + id: UUID \\
+    + tipo: TipoRegistro \\
+    + dataHora: DateTime \\
+    + status: StatusRegistro
+}{
+    + validarSequencia(): Boolean
+}
+
+\umlclass[x=12, y=2, width=1.5cm]{Justificativa}{
+    + id: UUID \\
+    + motivo: String \\
+    + tipo: TipoJustificativa
+}{
+    + aprovar(): void
+}
+
+% Relacionamentos UML
+\umluniaggreg[arg1=empresas, mult1=1, pos1=0.2, arg2=usuarios, mult2=*, pos2=0.8]{Empresa}{Usuario}
+\umluniaggreg[arg1=empresa, mult1=1, pos1=0.8, arg2=departamentos, mult2=*, pos2=0.2]{Empresa}{Departamento}
+\umluniaggreg[arg1=departamento, mult1=1, pos1=0.8, arg2=cargos, mult2=*, pos2=0.2]{Departamento}{Cargo}
+\umlcompo[arg1=usuario, mult1=1, pos1=0.2, arg2=informacoes, mult2=1, pos2=0.8]{Usuario}{InformacoesTrabalhistas}
+\umluniassoc[arg1=informacoes, mult1=*, pos1=0.2, arg2=cargo, mult2=1, pos2=0.8]{InformacoesTrabalhistas}{Cargo}
+\umluniassoc[arg1=informacoes, mult1=*, pos1=0.8, arg2=departamento, mult2=1, pos2=0.2]{InformacoesTrabalhistas}{Departamento}
+\umluniaggreg[arg1=usuario, mult1=1, pos1=0.8, arg2=horarios, mult2=*, pos2=0.2]{Usuario}{HorarioFuncionario}
+\umluniaggreg[arg1=usuario, mult1=1, pos1=0.2, arg2=registros, mult2=*, pos2=0.8]{Usuario}{RegistroPonto}
+\umluniaggreg[arg1=registro, mult1=1, pos1=0.8, arg2=justificativas, mult2=*, pos2=0.2]{RegistroPonto}{Justificativa}
 
 \end{tikzpicture}
 }
-\caption{Modelo entidade-relacionamento do sistema}
+\caption{Diagrama de classes UML do modelo de dados}
 \label{fig:modelo-entidades}
 \end{figure}
 

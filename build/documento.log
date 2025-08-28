@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.22)  27 AUG 2025 23:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.22)  27 AUG 2025 23:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1904,92 +1904,82 @@ Overfull \hbox (6.09445pt too wide) in paragraph at lines 36--36
 [24
 
 ]
-Overfull \hbox (52.64342pt too wide) in paragraph at lines 109--109
- [][]\T1/phv/b/n/12 (-20) InformacoesTrabalhistas 
- []
-
-
-Overfull \hbox (23.76172pt too wide) in paragraph at lines 109--109
- [][]\T1/phv/b/n/12 (-20) HorarioFuncionario 
- []
-
-
 
 [25]
 
 [26]
-Overfull \hbox (22.31232pt too wide) in paragraph at lines 167--167
+Overfull \hbox (22.31232pt too wide) in paragraph at lines 224--224
  [][]\T1/phv/b/n/12 (-20) DatabaseModule 
  []
 
 
-Overfull \hbox (20.34836pt too wide) in paragraph at lines 176--176
+Overfull \hbox (20.34836pt too wide) in paragraph at lines 233--233
  [][]\T1/phv/b/n/12 (-20) UsuariosModule 
  []
 
 
-Overfull \hbox (26.23999pt too wide) in paragraph at lines 182--182
+Overfull \hbox (26.23999pt too wide) in paragraph at lines 239--239
  [][]\T1/phv/b/n/12 (-20) EmpresasModule 
  []
 
 
-Overfull \hbox (2.86386pt too wide) in paragraph at lines 188--188
+Overfull \hbox (2.86386pt too wide) in paragraph at lines 245--245
  [][]\T1/phv/b/n/12 (-20) PontoModule 
  []
 
 
-Overfull \hbox (17.00493pt too wide) in paragraph at lines 191--191
+Overfull \hbox (17.00493pt too wide) in paragraph at lines 248--248
  [][]\T1/phv/m/n/12 (-20) RegistroPonto 
  []
 
 
-Overfull \hbox (8.9097pt too wide) in paragraph at lines 192--192
+Overfull \hbox (8.9097pt too wide) in paragraph at lines 249--249
  [][]\T1/phv/m/n/12 (-20) Justificativas 
  []
 
 
-Overfull \hbox (8.9097pt too wide) in paragraph at lines 193--193
+Overfull \hbox (8.9097pt too wide) in paragraph at lines 250--250
  [][]\T1/phv/m/n/12 (-20) Justificativas 
  []
 
 
-Overfull \hbox (10.20299pt too wide) in paragraph at lines 196--196
+Overfull \hbox (10.20299pt too wide) in paragraph at lines 253--253
  [][]\T1/phv/b/n/12 (-20) PostgreSQL 
  []
 
 
 
 [27]
-Overfull \hbox (1.59952pt too wide) in paragraph at lines 241--242
+Overfull \hbox (1.59952pt too wide) in paragraph at lines 298--299
 []\T1/phv/m/n/12 (-20) Implementada atra-vés do Ty-pe-ORM, for-
- []
-
-
-Overfull \hbox (9.76126pt too wide) in paragraph at lines 287--287
- [][]\T1/phv/m/n/12 (-20) GoogleMaps 
- []
-
-
-Overfull \hbox (9.76128pt too wide) in paragraph at lines 290--290
- []\T1/phv/m/n/12 (-20) Components 
- []
-
-
-Overfull \hbox (9.76128pt too wide) in paragraph at lines 291--291
- []\T1/phv/m/n/12 (-20) Components 
- []
-
-
-Overfull \hbox (24.80203pt too wide) in paragraph at lines 300--300
- [][]\T1/phv/m/n/12 (-20) useGeolocation 
  []
 
 
 
 [28]
+Overfull \hbox (9.76126pt too wide) in paragraph at lines 344--344
+ [][]\T1/phv/m/n/12 (-20) GoogleMaps 
+ []
+
+
+Overfull \hbox (9.76128pt too wide) in paragraph at lines 347--347
+ []\T1/phv/m/n/12 (-20) Components 
+ []
+
+
+Overfull \hbox (9.76128pt too wide) in paragraph at lines 348--348
+ []\T1/phv/m/n/12 (-20) Components 
+ []
+
+
+Overfull \hbox (24.80203pt too wide) in paragraph at lines 357--357
+ [][]\T1/phv/m/n/12 (-20) useGeolocation 
+ []
+
+
 
 [29]
-Overfull \hbox (6.09445pt too wide) in paragraph at lines 376--376
+Overfull \hbox (6.09445pt too wide) in paragraph at lines 433--433
  [][]\T1/phv/m/n/12 (-20) PostgreSQL 
  []
 
@@ -1997,9 +1987,9 @@ Overfull \hbox (6.09445pt too wide) in paragraph at lines 376--376
 
 [30]
 
-[31]) (./capitulos/software.tex
+[31]
 
-[32]) (./capitulos/consideracoes.tex))
+[32]) (./capitulos/software.tex) (./capitulos/consideracoes.tex))
 
 [33]
 \openout2 = `estrutura/pos-textual.aux'.
@@ -2034,15 +2024,15 @@ Package logreq Info: Writing requests to 'documento.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 51407 strings out of 473190
- 1042036 string characters out of 5715800
- 2125407 words of memory out of 5000000
- 73255 multiletter control sequences out of 15000+600000
+ 51674 strings out of 473190
+ 1048916 string characters out of 5715800
+ 2127412 words of memory out of 5000000
+ 73522 multiletter control sequences out of 15000+600000
  607342 words of font info for 313 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 119i,12n,134p,1271b,4447s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 119i,13n,134p,1271b,4447s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on build/documento.pdf (38 pages, 174469 bytes).
+Output written on build/documento.pdf (38 pages, 177107 bytes).
 PDF statistics:
  822 PDF objects out of 1000 (max. 8388607)
  748 compressed objects within 8 object streams
